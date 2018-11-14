@@ -1,0 +1,33 @@
+<view class='page'>
+  <view class="weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">充值金额</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder-class='placer' placeholder="请输入充值金额" value='{{money}}' bindinput='btnMoney' />
+      </view>
+    </view>
+  </view>
+  <view class='over'>账户余额：{{nowAmount}}</view>
+
+  <view class='type'>
+    <view class="weui-cells_after-title">
+      <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{types}}" wx:key="{{item.value}}">
+          <view class="weui-cell__hd">
+            <image src="{{item.icon}}" style="margin-right: 5px;vertical-align: middle;width:52rpx; height: 52rpx;"></image>
+          </view>
+          <view class="weui-cell__bd">{{item.name}}</view>
+          <view class="weui-cell__ft">
+            <radio value="{{item.value}}" checked="{{item.checked}}" />
+          </view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <view class='btn_class'>
+    <button bindtap='UserPay' class="weui-btn recharge" type="warn">充值</button>
+  </view>
+</view>

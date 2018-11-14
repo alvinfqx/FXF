@@ -1,0 +1,42 @@
+<view class="page">
+  <view class="page__bd">
+  
+    <form bindsubmit="formSubmit">
+      <view class="weui-cell" style='color:#79797a;font-size:30rpx;'>
+        <textarea class="weui-textarea" bindblur="bindTextAreaBlur" placeholder="你想说点什么" style="height: 7em" value="{{content}}" />
+      </view>
+
+      <view class="cell_img">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+
+                <block wx:for="{{files}}" wx:key="*this">
+                  <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}"> 
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+
+                <view class="weui-uploader__file">
+                  <!-- <image class="weui-uploader__img" src="/img/dog.png" mode="aspectFill" /> -->
+                </view>
+
+              </view>
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='btn'>
+        <button class='new_btn_css' type='warn' formType="submit">发布</button>
+      </view>
+
+    </form>
+
+  </view>
+</view>

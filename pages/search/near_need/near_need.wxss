@@ -1,0 +1,118 @@
+@import "/common/weui.wxss";
+
+Page {
+  background-color: #f6f7f8;
+  height: 100%;
+  width: 100%;
+}
+
+.btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.btn_css {
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(249, 101, 90, 1)), to(rgba(237, 63, 49, 1))) !important;
+}
+
+.btn button::after {
+  border: none;
+}
+
+.btn button {
+  border: none;
+}
+
+.bottomClass{
+  margin-bottom: 50rpx;
+  display: inline-block;
+  height: 50rpx;
+}
+
+/*需求 star  */
+.news_section {
+  margin-bottom: 10px;
+  margin-top:10px;
+}
+.heard_class image {
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 120rpx;
+  margin-right: 10px;
+}
+
+.title_text {
+  font-size: 30rpx;
+}
+
+.need_age{
+  background-color: #e84f54;
+  color: #fff;
+  padding: 2px 5px;
+  font-size: 20rpx;
+  margin-left: 8px;
+  border-radius: 5px;
+}
+
+.news_section button {
+  font-size:12px;
+  color: red;
+  border:1px solid red;
+  background-color: transparent;
+}
+
+.cont{
+  padding: 0px 5px 5px 20px;
+}
+
+.cont_title{
+  color: #000;
+  font-size: 30rpx;
+}
+
+.cont_detail{
+  color:#b8b9ba;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap; /*不显示的地方用省略号...代替*/
+  text-overflow: ellipsis; /* 支持 IE */
+  font-size: 30rpx;
+}
+.row_one{
+   font-size: 30rpx;
+   padding:5px 10px 10px 20px;
+}
+
+.row_one .row_item_two{
+  width: 30%;
+  color: #2a6ebc;
+  text-align:right;
+}
+
+.row_one .row_item_one{
+  width: 70%;
+  color: #000;
+}
+
+.row_two{
+   font-size: 30rpx;
+   padding:5px 10px 10px 20px;
+   color: #000;
+}
+.row_three{
+   font-size: 30rpx;
+   padding:5px 10px 20px 20px;
+}
+.row_three .row_item_two{
+  width: 30%;
+  text-align:right;
+  color:#b8b9ba;
+}
+
+.row_three .row_item_one{
+  width: 70%;
+  color: #000;
+}
+/*需求 end  */

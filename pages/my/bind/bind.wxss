@@ -1,0 +1,58 @@
+@import "/style/weui.wxss";
+
+Page {
+  background-color: #fff;
+}
+
+.page {
+  text-align: center;
+  display: table;
+  width: 100%;
+  margin-top: 80px;
+
+}
+
+.content {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.btn_class{
+  margin-top: 80px;
+}
+
+.comfire{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.hasbind image{
+  width: 200px;
+  height: 200px;
+}
+
+.nobind image{
+  width: 200px;
+  height: 200px;
+}
+
+.bind_text{
+  color:#ed4a47;
+  font-size: 36rpx;
+}
+
+.mobile{
+  color:#333;
+  font-size: 30rpx;
+}
+
+.nobind_text{
+  color:#ed4a47;
+  font-size: 30rpx;
+  margin-bottom: 15px;
+}
+
+.plhoder{
+  font-size: 30rpx;
+  color:#333;
+}

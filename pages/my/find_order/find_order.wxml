@@ -1,0 +1,53 @@
+<view class="page">
+
+  <view class='first' style='background-color:#fff;'>
+    <form bindsubmit="formSubmit">
+      <view class="weui-cells_after-title">
+
+        <view bindtap="chooseLocation" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">意向位置</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" wx:if="{{hasLocation === false}}">
+            选择意向的位置
+         </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access" wx:if="{{hasLocation === true}}">
+              {{locationAddress}}
+            </view>
+        
+        </view>
+
+        <view class="weui-cell">
+          <view class="weui-cell__bd lable_name">户型</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+            <picker bindchange="roomChange" range="{{room_list}}" value="{{room_id}}">
+              {{room_name}}
+            </picker>
+          </view>
+        </view>
+
+        <view class="weui-cell">
+          <view class="weui-cell__bd">租金</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+            <picker bindchange="moneyChange" range="{{money_list}}" value="{{money_id}}">
+              {{money_name}}
+            </picker>
+          </view>
+        </view>
+
+        <view class="weui-cell">
+          <view class="weui-cell__hd" style='margin-right:-8rem;'>详细描述</view>
+        </view>
+
+        <view class="detail_view">
+          <view class="weui-cell__bd" style='margin-left:15px;'>
+            <textarea class="textarea_class" placeholder="请输入详细描述" placeholder-class="phcolor" maxlength='300' />
+          </view>
+        </view>
+
+      </view>
+    </form>
+  </view>
+</view>
+
+<view class='btn'>
+  <button type="warn" class='btn_css' bindtap='bindOrder' style='border-radius:0px;'>查找已找到的房屋信息（16条）</button>
+</view>

@@ -1,0 +1,75 @@
+{
+  "pages":[   
+    "pages/home/index",
+    "pages/search/index",
+    "pages/my/new_index",
+    "pages/location/location",
+    "pages/my/search_record/record",
+    "pages/search/help_search/help_search",
+    "pages/search/search_position/search_position",  
+    "pages/search/circle_friends/circle_friends",
+    "pages/search/release_news/release_news",
+    "pages/search/near_need/near_need",
+    "pages/search/near_need/release_need",
+    "pages/home/home_detail/home_detail",
+    "pages/home/home_order/home_order",
+    "pages/home/home_detail/reserve",
+    "pages/search/need_rent/need_rent",
+    "pages/search/home_position/home_position",
+    "pages/search/his_home/his_home",
+    "pages/search/his_home/need_detail",
+    "pages/my/about/about",
+    "pages/my/wallet/wallet",
+    "pages/my/wallet/detail",
+    "pages/my/wallet/recharge",
+    "pages/my/wallet/getcash",
+    "pages/my/realname/realname",
+    "pages/my/password/password",
+    "pages/my/bind/bind",
+    "pages/my/bind/change",
+    "pages/my/personal/personal",
+    "pages/my/myneed/myneed",
+    "pages/my/my_rent/my_rent",
+    "pages/my/my_room/my_room",
+    "pages/my/find_order/find_order",
+    "pages/my/my_room/nopay",
+    "pages/my/my_room/nopay_detail",
+    "pages/my/my_room/get_money",
+    "pages/my/my_rent/checkout",
+    "pages/my/my_rent/rent_now",
+    "pages/my/my_active/my_active",
+    "pages/my/find_order/order_list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e84947",
+    "navigationBarTitleText": "放心房",
+    "navigationBarTextStyle": "#000"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#000",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "image/home1@2x.png",
+        "selectedIconPath": "image/home@2x.png",
+        "text": "找房"
+      },
+      {
+        "pagePath": "pages/search/index",
+        "iconPath": "image/find1@2x.png",
+        "selectedIconPath": "image/find@2x.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/my/new_index",
+        "iconPath": "image/mine1@2x.png",
+        "selectedIconPath": "image/mine@2x.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

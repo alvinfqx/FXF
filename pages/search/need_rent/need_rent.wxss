@@ -1,0 +1,151 @@
+@import "/common/weui.wxss";
+
+Page {
+  background-color: #f6f7f8;
+  height: 100%;
+  width: 100%;
+  font-size: 32rpx;
+}
+
+.btn {
+  width: 92%;
+  margin: 50rpx auto 80rpx;
+}
+
+.new_btn_css {
+  font-size: 36rpx;
+	color: #ffffff;
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(249, 101, 90, 1)), to(rgba(237, 63, 49, 1))) !important;
+}
+
+.title {
+  background-color: #fff;
+  margin-bottom: 15rpx;
+}
+
+.title_infor {
+  margin-left: 19rpx;
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 37rpx;
+	letter-spacing: 0rpx;
+	color: #000000;
+}
+
+.room_information {
+  background-color: #fff;
+  margin-bottom: 15rpx;
+}
+
+.title_view{
+  padding: 30rpx 0rpx 0rpx 30rpx;
+}
+
+.room_attr {
+  background-color: #fff;
+  margin-bottom: 15rpx;
+  padding-bottom: 42rpx;
+}
+
+.attr_content {
+  padding-left: 42rpx;
+}
+
+.checkclass {
+  /* padding: 3px 5px; */
+  width: 120rpx;
+  height: 60rpx;
+  text-align: center;
+  margin: 15rpx 15rpx;
+  display: inline-block;
+  color: #666666;
+  font-size: 28rpx;
+  background-color: #ffffff;
+	border-radius: 6rpx;
+	border:2rpx solid  #dfdfdf;
+  line-height: 60rpx;
+}
+
+checkbox-group .active {
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(249, 101, 90, 1)), to(rgba(237, 63, 49, 1))) !important;
+  color: #fff;
+  border:2rpx solid  #fff;
+}
+
+.room_desc {
+  background-color: #fff;
+  margin-bottom: 15rpx;
+}
+
+.position_class image {
+  margin-right: 15rpx;
+  vertical-align: middle;
+  width: 24rpx;
+  height: 30rpx;
+}
+
+.position_cell{
+  padding:2px;
+}
+
+.text {
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #0099ff;
+}
+
+.phcolor {
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #cccccc;
+}
+
+.textarea_class {
+  height: 200rpx;
+}
+
+.placeholder{
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #cccccc;
+}
+
+.pick_class{
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333;
+}
+
+.title_lable{
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+
+.ft_text{
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #999999;
+}
+
+
+.weui-cell:after {
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.weui-cell:before {
+  border-top: 1rpx solid #f4f4f4;
+}

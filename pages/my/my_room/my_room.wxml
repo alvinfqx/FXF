@@ -1,0 +1,89 @@
+<view class="page">
+
+  <view class='first'>
+    <view class="weui-grids">
+      <block wx:for="{{grids}}" wx:key="*this">
+        <view class="weui-grid" hover-class="weui-grid_active">
+          <view class="weui-grid__label">苍荣大厦</view>
+          <view class="weui-grid__label">1603</view>
+          <view class="weui-grid__label" style='color:#ff4a4d;'>¥2550/月</view>
+        </view>
+      </block>
+      <view class="weui-grid" hover-class="weui-grid_active" bindtap='addRoomBtn'>
+         <view class="weui-grid__label">         
+          <image class="weui-grid__label" src='/image/add1@2x.png' style='width:80%;height:76px;margin:0 auto;'></image> 
+         </view>        
+      </view>
+    </view>
+
+  </view>
+
+  <view class='second' style='background-color:#fff;margin-bottom:100px;'>
+    <view class="weui-cells_after-title">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <image src="/image/edit@2x.png" style="margin-right: 10px;vertical-align: middle;width:18px; height: 18px;"></image>
+        </view>
+        <view class="weui-cell__bd">收租记录</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+
+    <view class="flex-row flex-fare" style="display: flex;">
+      <view class="flex-view-item">
+        <view>
+          <text>上月租金：</text>
+          <text>¥6979</text>
+        </view>
+        <view>
+          <text style='padding-left:26%;'>房租：</text>
+          <text style='color:#a1a1a1;'>¥2651.51</text>
+        </view>
+        <view>
+          <text style='padding-left:16%;'>物业费：</text>
+          <text style='color:#a1a1a1;'>¥651.12</text>
+        </view>
+        <view>
+          <text style='padding-left:24%;'>水费：</text>
+          <text style='color:#a1a1a1;'>¥645.32</text>
+        </view>
+        <view>
+          <text style='padding-left:24%;'>电费：</text>
+          <text style='color:#a1a1a1;'>¥534.44</text>
+        </view>
+      </view>
+      <view class="flex-view-item">
+
+        <view>
+          <text>本月租金：</text>
+          <text>¥6979</text>
+        </view>
+        <view>
+          <text style='padding-left:26%;'>房租：</text>
+          <text style='color:#a1a1a1;'>¥2651.51</text>
+        </view>
+        <view>
+          <text style='padding-left:16%;'>物业费：</text>
+          <text style='color:#a1a1a1;'>¥651.12</text>
+        </view>
+        <view>
+          <text style='padding-left:24%;'>水费：</text>
+          <text style='color:#a1a1a1;'>¥645.32</text>
+        </view>
+        <view>
+          <text style='padding-left:24%;'>电费：</text>
+          <text style='color:#a1a1a1;'>¥534.44</text>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+
+  <view class='btn'>
+    <button type="default" class='btn_css_one' bindtap='noPayBtn' style='border-radius:0px;color:#ff4a4d;'>未交租住户 (2)</button>
+    <button type="warn" class='btn_css_two' bindtap='getMoneyBtn' style='border-radius:0px;'>收取本月租金</button>
+  </view>

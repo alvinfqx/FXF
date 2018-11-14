@@ -1,0 +1,99 @@
+@import "/common/weui.wxss";
+
+Page {
+  background-color: #f6f7f8;
+  height: 100%;
+  width: 100%;
+}
+
+.position_class image {
+  margin-right: 15rpx;
+  vertical-align: middle;
+  width: 24rpx;
+  height: 30rpx;
+}
+
+.view_class {
+  font-size: 16px !important;
+  background-color: #fff;
+}
+
+.text {
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0rpx;
+  color: #09f;
+}
+
+.phcolor {
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0rpx;
+  color: #ccc;
+}
+
+.textarea_class {
+  height: 134rpx;
+}
+
+.detail_view {
+  margin-top: 13rpx;
+  padding-bottom: 20px;
+}
+
+.tip_class {
+  margin-top: 38rpx;
+  font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 55rpx;
+	letter-spacing: 0rpx;
+	color: #999999;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+
+.text_content {
+  display: inline-block;
+  font-size: 26rpx;
+	font-weight: normal;
+	letter-spacing: 0rpx;
+	color: #0099ff;
+}
+
+.btn {
+  width: 92%;
+  margin: 50rpx auto 50rpx;
+}
+
+.new_btn_css {
+  font-size: 36rpx;
+	color: #ffffff;
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(249, 101, 90, 1)), to(rgba(237, 63, 49, 1))) !important;
+}
+
+.weui-cell:after {
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.weui-cell:before {
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.select_class {
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0rpx;
+  color: #999;
+}
+
+.lable_name {
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0rpx;
+  color: #333;
+}

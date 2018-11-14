@@ -1,0 +1,74 @@
+@import "/style/weui.wxss";
+Page{
+  background-color: #f1f1f1;
+}
+
+.title{
+  background-color: #fff;
+  padding:20rpx 40rpx;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+	color: #ee5956;
+}
+
+
+.news_section {
+  margin-bottom: 0rpx;
+}
+
+.heard_class image {
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 120rpx;
+  margin-right: 10px;
+}
+
+.title_text {
+  font-size: 30rpx;
+  color: #000000;
+}
+
+.need_age{
+  background-color: #e84f54;
+  color: #fff;
+  padding: 2px 5px;
+  font-size: 20rpx;
+  margin-left: 8px;
+  border-radius: 5px;
+}
+
+.news_section button {
+  font-size:12px;
+  color: red;
+  border:1px solid red;
+  background-color: transparent;
+}
+
+.cont{
+  padding: 0px 30rpx 35rpx 150rpx;
+}
+
+.cont_title{
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #000000;
+}
+
+.cont_detail{
+  /* overflow: hidden; */
+  width: 100%;
+  /* white-space: nowrap; 不显示的地方用省略号...代替 */
+  /* text-overflow: ellipsis;  支持 IE  */
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #999999;
+}
+
+.border_bottom{
+  border-bottom: 2rpx solid #dfdfdf;
+  margin-left: 150rpx;
+  width: 100%;
+}

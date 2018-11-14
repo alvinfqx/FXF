@@ -1,0 +1,62 @@
+<loading hidden="{{loading}}">正在加载</loading>
+<view class='photo'>
+  <view class='photo_class' wx:if="{{userinfo != null}}">
+    <image class="userinfo-avatar" src='{{photo}}' bindtap='btnPhoto'></image>
+  </view>
+  <view class='photo_class' wx:else>
+    <image class="userinfo-avatar" src='/image/11@2x.png' bindtap='btnPhoto'></image>
+  </view>
+</view>
+
+  <view class="weui-cells_after-title title_class">
+   
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label lable_name">昵称</view>
+      </view>
+      <view class="weui-cell__bd">
+         <input class="weui-input value_class" placeholder="请输入昵称" auto-focus bindinput="setNickName" value='{{nickname}}' />
+      </view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd lable_name" style='margin-right:-7rem;'>生日</view>
+      <view class="weui-cell__bd">
+         <picker mode="date" value="{{birthday}}" start="1930-01-01" end="2050-01-01" bindchange="setBirthday">
+          <view class='value_class'>
+           {{birthday}}
+          </view>
+        </picker>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd" style='margin-right:-5px;'>
+        <view class="weui-label lable_name">签名</view>
+      </view>
+      <view class="weui-cell__bd">
+         <input class="weui-input value_class" placeholder="请输入您的个性签名" auto-focus bindinput="signature" value='{{signature}}' maxlength='30' />
+      </view>
+    </view>
+
+
+     <view class="weui-cell">
+      <view class="weui-cell__bd lable_name" style='margin-right:-7rem;'>性别</view>
+      <view class="weui-cell__bd">
+         <picker value="{{sex}}" bindchange="setSex" range="{{sexArr}}">
+          <view class='value_class'>
+           {{sex}}
+          </view>
+        </picker>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+
+    
+ </view>
+
+
+<view style='margin-top:40px' class='btn_class'>
+  <button type="warn" bindtap='btnSave' class='btn'>保存</button>
+</view>

@@ -1,0 +1,43 @@
+@import "/common/weui.wxss";
+
+Page {
+  background-color: #eff0f1;
+  height: 100%;
+  width: 100%;
+}
+
+.title{
+  background-color: #fff;
+  color:#7e7f7f;
+  padding: 5px 0px;
+}
+.class_one{
+  width: 40%;
+}
+.class_two{
+  width: 30%;
+}
+
+.title .flex-view-item{
+  text-align: center;
+  font-size: 24rpx;
+	color: #333333;
+  padding-top: 5px;
+}
+
+.content{
+  margin-top: 5px;
+  background-color: #fff;
+  color:#000;
+  height: 100%;
+}
+
+.content .weui-cell__bd{
+  font-size: 30rpx;
+	color: #333333;
+}
+
+.content .weui-cell__ft{
+  font-size: 36rpx;
+	color: #333333;
+}

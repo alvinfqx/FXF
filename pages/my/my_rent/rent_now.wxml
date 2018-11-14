@@ -1,0 +1,48 @@
+<view class="page">
+
+  <view class='view_class'>
+
+    <view class='title'>7月账单</view>
+
+    <view class='content'>
+      <view class="flex-row" style="display: flex;">
+        <view class="flex-view-item">房屋</view>
+        <view class="flex-view-item" style='text-align:right;'>5000元</view>
+      </view>
+      <view class="flex-row" style="display: flex;">
+        <view class="flex-view-item">物业费</view>
+        <view class="flex-view-item" style='text-align:right;'>200元</view>
+      </view>
+      <view class="flex-row" style="display: flex;">
+        <view class="flex-view-item">水费(7元/吨)</view>
+        <view class="flex-view-item" style='text-align:right;'>67.50元</view>
+      </view>
+      <view class="flex-row" style="display: flex;">
+        <view class="flex-view-item">电费(1.3元/度)</view>
+        <view class="flex-view-item" style='text-align:right;'>326元</view>
+      </view>
+    </view>
+
+    <view class='status'>
+        待缴付
+    </view>
+
+    <view class='time_class'>
+       截止缴费时间：2018年7月11日
+    </view>
+
+    <view class='money'>
+
+    <text class='money_tip'>总金额</text>
+    <text class='money_val'>¥5593.5</text>
+    
+    </view>
+
+  </view>
+
+</view>
+
+
+<view class='btn'>
+  <button type="warn" class='btn_css' bindtap='checkoutBtn' style='border-radius:0px;'>立即支付</button>
+</view>

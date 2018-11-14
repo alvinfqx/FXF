@@ -1,0 +1,196 @@
+
+<loading hidden="{{loading}}">正在加载</loading>
+
+  <view class="page" id='page'>
+    <view class="page__bd">
+      <view class="weui-tab">
+        <view class="weui-navbar">
+          <block wx:for="{{tabs}}" wx:key="*this">
+
+            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <view class="weui-navbar__title">
+                <image class='img_one' wx:if="{{index==0}}" src="/image/people@2x.png" style='width: 43rpx;height: 32rpx;'></image>
+                <image class='img_two' wx:if="{{index==1}}" src="/image/position1@2x.png" style='width: 24rpx;height: 32rpx;'></image>
+                {{item}}
+              </view>
+            </view>
+          </block>
+          <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        </view>
+        <view class="weui-tab__panel">
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+
+            <block wx:if="{{friends_list.length <= 0}}">
+              <view style='text-align:center;margin-top:40%;'>
+                无数据
+              </view>
+            </block>
+            <block wx:else>
+              <view class="section news_section" wx:for-items="{{friends_list}}">
+                <view class="weui-cells_after-title" style='background-color:#fff;'>
+
+                  <view class="weui-cell">
+                    <navigator url="/pages/search/his_home/his_home">
+                      <view class="weui-cell__hd heard_class" style="position: relative;margin-right: 10px;">
+                      
+                        <!--头像  -->
+                        <view wx:if="{{item.Neighbor.UserPhoto}}">
+                          <image src="{{item.Neighbor.UserPhoto}}" />
+                        </view>
+                        <view wx:else>
+                          <image src="../../../image/11@2x.png" />
+                        </view>
+
+                      </view>
+                    </navigator>
+                    <view class="weui-cell__bd">
+                      <view class='title_text'>{{item.Neighbor.CreateUserName}}</view>
+                      <view class='difftime'>{{item.Neighbor.DiffTime}}</view>
+                    </view>
+                  </view>
+
+                  <view style='margin-left:17%;'>
+                    <!-- <navigator url=""> -->
+                    <view class='title'>{{item.Neighbor.Content}}</view>
+                    <!-- </navigator> -->
+                    <view class="img_class">
+                      <view wx:for="{{item.Neighbor.PhotoList}}" wx:for-item="itemPic" wx:if="{{index < 3}}" wx:for-index="index" style="display:inline;">
+                        <view wx:if="{{itemPic}}" style='display:inline-block;'>
+                          <image src="{{baseUrl+itemPic}}"></image>
+                        </view>
+                      </view>
+                      <view wx:for="{{item.Neighbor.PhotoList}}" wx:if="{{index >= 3}}" wx:for-index="index" style="display:inline;">
+                        <view wx:if="{{itemPic}}" style='display:inline-block;'>
+                          <image src="{{baseUrl+itemPic}}"></image>
+                        </view>
+
+                      </view>
+                    </view>
+                  </view>
+
+                  <view class="flex-row header_flex" style="display: flex;">
+                    <view class="flex-view-item header_item">
+                      <a bindtap="lookView">
+                        <view class="weui-media-box__desc">
+                          <image src='/image/eye@2x.png' class='img_one'></image>
+                          {{item.Neighbor.Hits}}
+                        </view>
+                      </a>
+
+                    </view>
+
+                    <view class="flex-view-item header_item">
+                      <a bindtap="commentNumClick" data-index="{{index}}">
+                        <view class="weui-media-box__desc">
+                          <image src='/image/comment@2x.png' class='img_two'></image>
+                          {{item.Neighbor.Comment}}
+                        </view>
+                      </a>
+                    </view>
+
+                    <view class="flex-view-item header_item">
+                      <a bindtap="yesNumClick" data-index="{{index}}">
+                        <view class="weui-media-box__desc">
+                          <image src='/image/like@2x.png' class='img_three'></image>
+                          {{item.Neighbor.IsYes}}
+                        </view>
+                      </a>
+
+                    </view>
+                  </view>
+
+
+                  <view style='background-color:#fff;' wx:if="{{index == btn_index}}">
+
+                    <view class="section comment_section" wx:for="{{item.ReplyList}}" wx:for-item="replyitem" wx:key="Id">
+                      <view class="weui-cells_after-title">
+                        <view class="weui-cell">
+                          <view class="weui-cell__hd comment_class" style="position: relative;margin-right: 10px;">
+                            <view wx:if="{{replyitem.Photo}}">
+                              <image src="{{replyitem.Photo}}" />
+                            </view>
+
+                          </view>
+
+                          <view class="weui-cell__bd comment_title">
+                            <view class=''>{{replyitem.NickName}}</view>
+                            <view>{{replyitem.Reply}}</view>
+                          </view>
+                        </view>
+
+                        <view class='comment_foot'>
+                          <view class="flex-row" style="display: flex;">
+                            <view class="flex-view-item" style='width:60%;'>{{replyitem.DiffTime}}</view>
+                            <view class="flex-view-item" style='width:20%;'>
+                              <image src='/img/friends/u1368.png'></image>
+                              回复
+                            </view>
+                            <view class="flex-view-item" style='width:20%;'>
+                              <image src='/img/friends/goodicon_u1388.png'></image>
+                              50
+                            </view>
+                          </view>
+                          <view style='background-color:#f3f3f3;height:1px;width:100%;margin-top:10px;'></view>
+                        </view>
+
+                      </view>
+
+                    </view>
+                  </view>
+
+                  <view style='background-color:#fff;' wx:if="{{index == btn_yes_index}}">
+
+                    <view class="section yes_section" wx:for="{{item.IsYesList}}" wx:for-item="yesitem" wx:key="Id">
+                      <view class="weui-cells_after-title">
+                        <view class="weui-cell">
+                          <view class="weui-cell__hd yes_class" style="position: relative;margin-right: 10px;">
+                            <view wx:if="{{yesitem.IsYesUserPhoto}}">
+                              <image src="{{baseUrl+yesitem.IsYesUserPhoto}}" />
+                            </view>
+
+                          </view>
+
+                          <view class="weui-cell__bd _title">
+                            <view class='' style='font-size:14px;'>{{yesitem.CreateUserName}}</view>
+                            <view style='font-size:12px;color:#b7b8b9;'>个性签名展示个性签名展示</view>
+                          </view>
+                        </view>
+
+                      </view>
+
+                      <view style='background-color:#f3f3f3;height:1px;width:100%;margin-top:3px;margin-left:16%;'></view>
+                    </view>
+
+                  </view>
+
+
+                </view>
+              </view>
+
+            </block>
+
+
+            <navigator url='/pages/search/release_news/release_news'>
+              <view class='realse'>
+                <!-- <image src='/image/edit@2x.png'></image> -->
+                <text class='realse_text'>发布</text>
+              </view>
+            </navigator>
+
+          </view>
+
+
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+            <view>
+              <view class="map_container">
+                <map class="map" id="map" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" covers="{{covers}}" show-location></map>
+              </view>
+
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+ 

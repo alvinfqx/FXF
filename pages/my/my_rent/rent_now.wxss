@@ -1,0 +1,84 @@
+@import "/style/weui.wxss";
+
+Page {
+  background-color: #eff0f1;
+  height: 100%;
+  width: 100%;
+}
+
+.view_class {
+  background-color: #fff;
+  margin: 10px;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  color: #ff494e;
+  padding: 12px 0px;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.content {
+  margin: 20px;
+}
+
+.content .flex-row {
+  width: 100%;
+  font-size: 14px;
+  color: #5f5f5f;
+  line-height: 30px;
+}
+
+.content .flex-view-item {
+  width: 50%;
+}
+
+.status {
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px 0px;
+  color: #748895;
+}
+
+.time_class{
+  color:#a3a3a3;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.money{
+  padding: 10px 20px 10px 20px;
+  border-top: 1px solid #f3f3f3;
+}
+
+.money_tip{
+  font-size: 16px;
+  width: 50%;
+  display: inline-block;
+}
+
+.money_val{
+  font-size: 25px;
+  color: #f34549;
+  width: 50%;
+  text-align: right;
+  display: inline-block;
+}
+
+.btn {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.btn button::after {
+  border: none;
+}
+
+.btn button {
+  border: none;
+}

@@ -1,0 +1,76 @@
+/* pages/search/index.wxss */
+@import "/common/weui.wxss";
+
+page {
+  background-color: #f6f7f8;
+  height: 100%;
+  width: 100%;
+}
+
+.weui-cell__hd image {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.img_one {
+  width: 53rpx;
+  height: 53rpx;
+}
+
+.img_two {
+  width: 60rpx;
+  height: 55rpx;
+}
+
+.img_three {
+  width: 68rpx;
+  height: 49rpx;
+}
+
+.img_four {
+  width: 53rpx;
+  height: 51rpx;
+}
+
+.list {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.navigator_class {
+  padding: 0rpx 57rpx;
+}
+
+.class_text {
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 115rpx;
+  letter-spacing: 0rpx;
+  color: #333;
+}
+
+.text_one {
+  padding-left: 34rpx;
+}
+
+.text_two {
+  padding-left: 31rpx;
+}
+
+.text_three {
+  padding-left: 24rpx;
+}
+
+.text_four {
+  padding-left: 38rpx;
+}
+
+
+ .weui-cell:after {
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.weui-cell:before {
+  border-top: 1rpx solid #f4f4f4;
+} 

@@ -1,0 +1,81 @@
+<loading hidden="{{loading}}">正在加载</loading>
+<view class='page'>
+  <view class='title'>
+    共发布：
+    <text>{{num}}次</text>
+  </view>
+
+  <block wx:if="{{releaseList.length <= 0}}">
+    <view style='text-align:center;margin-top:40%;'>
+      无数据
+    </view>
+  </block>
+  <block wx:else>
+    <view class="section news_section" wx:for="{{releaseList}}">
+      <view class="weui-cells_after-title" style='background-color:#fff;'>
+        <view class="weui-cell" style='padding-top: 40rpx;'>
+          <view class="weui-cell__bd">
+            <view class='cont_title'>
+                {{item.Title}}
+            </view>
+          </view>
+          <view class="weui-cell__ft">
+            <button class="weui-btn" bindtap='eidtBtn' data-id="{{item.Id}}">修改</button>
+          </view>
+        </view>
+
+        <view class='cont'>
+          <view class='cont_detail'>
+              {{item.Content}}
+          </view>
+        </view>
+
+        <view class="flex-row row_one" style="display: flex;">
+          <view class="flex-view-item row_item_one">
+            <image src="/image/time1@2x.png" style="margin-right: 5px;vertical-align: middle;width:25rpx; height: 25rpx;"></image>
+            <text>时间：</text>
+            <text>{{item.BeginDate?item.BeginDate:''}}</text>
+          </view>
+          <view class="flex-view-item row_item_two" data-param="{{item.Id}}" bindtap='pictureBtn'>
+            查看图片描述
+          </view>
+        </view>
+
+        <view class="flex-row row_two" style="display: flex;">
+          <view class="flex-view-item row_item_one">
+            <image src="/image/Positioning@2x.png" style="margin-right: 5px;vertical-align: middle;width:19rpx; height: 25rpx;"></image>
+            <text>地点：</text>
+            <text>{{item.Position?item.Position:''}}</text>
+          </view>
+        </view>
+
+        <view class="flex-row row_three" style="display: flex;">
+          <view class="flex-view-item row_item_one">
+            <image src="/image/purse@2x.png" style="margin-right: 5px;vertical-align: middle;width:23rpx; height: 25rpx;"></image>
+            <text>花费：</text>
+            <text>{{item.Money?item.Money:''}}元/人</text>
+          </view>
+          <view class="flex-view-item row_item_two">
+            {{item.DiffTime?item.DiffTime:'0天前'}}
+          </view>
+        </view>
+
+        <!-- <view class="weui-cells_after-title peoplenum">
+          <view class='weui-cell'></view>
+          <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              已报名帮助人数：
+            </view>
+            <view class="weui-cell__bd">
+              <text class='peo'>156</text> 
+              <text class='tip'>+16</text>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+        </view> -->
+
+      </view>
+    </view>
+  </block>
+
+</view>

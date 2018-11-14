@@ -1,0 +1,132 @@
+<view class="page">
+
+  <view class='first'>
+    <view class="flex-row" style="display: flex;">
+      <view class="flex-view-item item-one">
+        <image src="/image/bg2@2x.png">
+        </image>
+        <view class='content_one'>
+          <view>¥500</view>
+          <view style='font-size:12px;padding-left:20%;'>定金</view>
+        </view>
+
+      </view>
+      <view class="flex-view-item item-two">
+        <image src="/image/bg3@2x.png">
+        </image>
+        <view class='content_two'>
+          <view>¥5652</view>
+          <view style='font-size:12px;padding-left:20%;'>租金</view>
+        </view>
+
+      </view>
+      <view class="flex-view-item item-three">
+        <image src="/image/bg4@2x.png">
+        </image>
+        <view class='content_three'>
+          <view>¥5652</view>
+          <view style='font-size:12px;padding-left:20%;'>押金</view>
+        </view>
+
+      </view>
+    </view>
+
+    <view class="flex-row flex-row-two" style="display: flex;">
+      <view class="flex-view-item">
+        <image src="/image/bg1@2x.png">
+        </image>
+        <view class='content'>
+          <view style='font-size:14px;'>2017-07-12</view>
+          <view style='font-size:12px;padding-left:10%;'>入住时间</view>
+        </view>
+      </view>
+      <view class="flex-view-item">
+        <image src="/image/bg1@2x.png">
+        </image>
+        <view class='content'>
+          <view style='font-size:14px;'>3个月14天</view>
+          <view style='font-size:12px;padding-left:10%;'>已住时间</view>
+        </view>
+
+      </view>
+      <view class="flex-view-item">
+        <image src="/image/bg1@2x.png">
+        </image>
+        <view class='content'>
+          <view style='font-size:14px;'>2018-1-12</view>
+          <view style='font-size:12px;padding-left:10%;'>交租时间</view>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+
+  <view class='second' style='background-color:#fff;margin-bottom:50px;'>
+    <view class="weui-cells_after-title">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <image src="/image/edit@2x.png" style="margin-right: 10px;vertical-align: middle;width:18px; height: 18px;"></image>
+        </view>
+        <view class="weui-cell__bd">交租记录</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+
+    <view class="flex-row flex-fare" style="display: flex;">
+      <view class="flex-view-item">
+        <view>
+          <text>上月租金：</text>
+          <text>¥6979</text>
+        </view>
+        <view>
+          <text style='padding-left:26%;'>房租：</text>
+          <text style='color:#a1a1a1;'>¥2651.51</text>
+        </view>
+        <view>
+          <text style='padding-left:16%;'>物业费：</text>
+          <text style='color:#a1a1a1;'>¥651.12</text>
+        </view>
+        <view>
+          <text style='padding-left:24%;'>水费：</text>
+          <text style='color:#a1a1a1;'>¥645.32</text>
+        </view>
+        <view>
+          <text style='padding-left:24%;'>电费：</text>
+          <text style='color:#a1a1a1;'>¥534.44</text>
+        </view>
+      </view>
+      <view class="flex-view-item">
+
+        <view>
+          <text>本月租金：</text>
+          <text>¥6979</text>
+        </view>
+        <view>
+          <text style='padding-left:26%;'>房租：</text>
+          <text style='color:#a1a1a1;'>¥2651.51</text>
+        </view>
+        <view>
+          <text style='padding-left:16%;'>物业费：</text>
+          <text style='color:#a1a1a1;'>¥651.12</text>
+        </view>
+        <view>
+          <text style='padding-left:24%;'>水费：</text>
+          <text style='color:#a1a1a1;'>¥645.32</text>
+        </view>
+        <view>
+          <text style='padding-left:24%;'>电费：</text>
+          <text style='color:#a1a1a1;'>¥534.44</text>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+<view class='btn'>
+    <button type="default" class='btn_css_one' bindtap='exitBtn' style='border-radius:0px;color:#ff4a4d;'>申请退房</button>
+    <button type="warn" class='btn_css_two' bindtap='rentBtn' style='border-radius:0px;'>立即交租</button> 
+  </view>

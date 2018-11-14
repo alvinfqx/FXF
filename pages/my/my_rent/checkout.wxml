@@ -1,0 +1,81 @@
+<view class="page">
+  <view class='first'>
+    <view class="flex-row flex-row-two" style="display: flex;">
+      <view class="flex-view-item">
+        <image src="/image/bg1@2x.png">
+        </image>
+        <view class='content'>
+          <view style='font-size:14px;'>2017-07-12</view>
+          <view style='font-size:12px;padding-left:10%;'>入住时间</view>
+        </view>
+      </view>
+      <view class="flex-view-item">
+        <image src="/image/bg1@2x.png">
+        </image>
+        <view class='content'>
+          <view style='font-size:14px;'>3个月14天</view>
+          <view style='font-size:12px;padding-left:10%;'>已住时间</view>
+        </view>
+
+      </view>
+      <view class="flex-view-item">
+        <image src="/image/bg1@2x.png">
+        </image>
+        <view class='content'>
+          <view style='font-size:14px;'>2018-1-12</view>
+          <view style='font-size:12px;padding-left:10%;'>交租时间</view>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+
+  <view class='second' style='background-color:#fff;margin-bottom:10px;'>
+    <view class="weui-cells_after-title">
+       
+       <view class="weui-cell">
+          <view class="weui-cell__bd lable_name" >选择搬离日期</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+          <picker mode="date" value="{{check_data}}" start="1930-01-01" end="2050-01-01" bindchange="setCheckData">
+          <view style='color:#333;'>
+           {{check_data}}
+          </view>
+        </picker>
+          </view>
+        </view>
+
+        <view class="weui-cell">
+          <view class="weui-cell__bd" >选择搬离原因</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+           <picker bindchange="reasonChange" range="{{reason_list}}" value="{{reason_id}}">
+            <view style='color:#333;'>
+                {{reason_name}}
+             </view>
+            </picker>
+          </view>
+        </view>
+
+        <view class="weui-cell">
+          <view class="weui-cell__hd" style='margin-right:-8rem;'>备注</view>
+        </view>
+
+        <view class="detail_view">
+          <view class="weui-cell__bd" style='margin-left:15px;'>
+            <textarea class="textarea_class" placeholder="请输入您的备注内容" placeholder-class="phcolor" maxlength='300' />
+          </view>
+        </view>
+
+
+    </view>
+  </view>
+
+  <view class='third'>
+    <text>*请提前15日申请搬离,以免产生纠纷影响押金退还！</text>
+  </view>
+
+</view>
+
+<view class='btn'>
+    <button type="warn" class='btn_css' bindtap='checkoutBtn' style='border-radius:0px;'>确定申请</button> 
+  </view>

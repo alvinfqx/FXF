@@ -1,0 +1,57 @@
+@import "/style/weui.wxss";
+
+Page {
+  background-color: #f6f7f8;
+  height: 100%;
+  width: 100%;
+  font-size: 30rpx;
+}
+
+.weui-cell {
+  font-size: 28rpx;
+  font-weight: normal;
+  letter-spacing: 0rpx;
+  color: #333;
+  background-color: #fff;
+}
+
+.phcolor {
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 91rpx;
+  letter-spacing: 0rpx;
+  color: #ccc;
+}
+
+.weui-cell__hd {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.weui-cell:after {
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.weui-cell:before {
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.weui-cells::after {
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.content_view{
+  margin-top: 30rpx;
+}
+
+.btn {
+  width: 92%;
+  margin: 80% auto 30rpx;
+}
+
+.new_btn_css {
+  font-size: 36rpx;
+  color: #fff;
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(249, 101, 90, 1)), to(rgba(237, 63, 49, 1))) !important;
+}

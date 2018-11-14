@@ -1,0 +1,79 @@
+<view class="page">
+
+  <block wx:if="{{needArray.length <= 0}}">
+    <view style='text-align:center;margin-top:40%;'>
+      无数据
+    </view>
+  </block>
+  <block wx:else>
+    <view class="section news_section" wx:for="{{needArray}}">
+      <view class="weui-cells_after-title" style='background-color:#fff;'>
+        <view class="weui-cell" style='padding-top:15px;'>
+          <view class="weui-cell__hd heard_class">
+            <!--头像  -->
+            <image src="{{item.UserPic}}" />
+          </view>
+          <view class="weui-cell__bd">
+            <view class='title_text'>
+              {{item.NickName}}
+              <text class='need_age'> ♂︎ {{item.Age}}</text>
+            </view>
+            <view style="font-size: 12px;color: #b8b9ba;">{{item.UserRemark}}</view>
+          </view>
+          <view class="weui-cell__ft">
+           <navigator url="/pages/search/his_home/need_detail?did={{item.Id}}">
+            <button class="weui-btn">帮助Ta</button>
+             </navigator>
+          </view>
+        </view>
+
+        <view class='cont'>
+          <view class='cont_title'>
+            {{item.Title}}
+          </view>
+          <view class='cont_detail'>
+            {{item.Content}}
+          </view>
+        </view>
+
+        <view class="flex-row row_one" style="display: flex;">
+          <view class="flex-view-item row_item_one">
+            <image src="/image/time1@2x.png" style="margin-right: 5px;vertical-align: middle;width:15px; height: 15px;"></image>
+            <text>时间：</text>
+            <text>{{item.BeginDate?item.BeginDate:''}}</text>
+          </view>
+          <view class="flex-view-item row_item_two">
+            <navigator url="/pages/search/his_home/need_detail?did={{item.Id}}">
+              查看图片描述
+            </navigator>
+          </view>
+        </view>
+
+        <view class="flex-row row_two" style="display: flex;">
+          <view class="flex-view-item row_item_one">
+            <image src="/image/Positioning@2x.png" style="margin-right: 5px;vertical-align: middle;width:15px; height: 15px;"></image>
+            <text>地点：</text>
+            <text>{{item.Position?item.Position:''}}</text>
+          </view>
+        </view>
+
+        <view class="flex-row row_three" style="display: flex;">
+          <view class="flex-view-item row_item_one">
+            <image src="/image/purse@2x.png" style="margin-right: 5px;vertical-align: middle;width:15px; height: 15px;"></image>
+            <text>花费：</text>
+            <text>{{item.Money?item.Money:''}}元/人</text>
+          </view>
+          <view class="flex-view-item row_item_two">
+            {{item.DiffTime?item.DiffTime:'0'}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view class='bottomClass'></view>
+
+  <view class='btn'>
+    <button type="warn" class='btn_css' bindtap='bindNeed' style='border-radius:0px;'>发布需求</button>
+  </view>
+</view>

@@ -1,0 +1,44 @@
+<loading hidden="{{loading}}">正在加载</loading>
+<view class="page">
+  <view class='title'>
+    报名人数
+    <text>（{{num}}）</text>
+  </view>
+  <block wx:if="{{helpList.length <= 0}}">
+    <view style='text-align:center;margin-top:40%;'>
+      无帮助记录
+    </view>
+  </block>
+  <block wx:else>
+    <view class="section news_section" wx:for="{{helpList}}">
+      <view class="weui-cells_after-title" style='background-color:#fff;'>
+        <view class="weui-cell">
+          <view class="weui-cell__hd heard_class">
+            <!--头像  -->
+            <image src="/image/11@2x.png" />
+          </view>
+          <view class="weui-cell__bd">
+            <view class='title_text'>
+              陌生人
+              <text class='need_age'> ♂︎24 </text>
+            </view>
+            <view style="font-size: 24rpx;color: #b8b9ba;">21分钟前</view>
+          </view>
+          <view class="weui-cell__ft">
+            <button class="weui-btn" bindtap='helpMeBtn'>请Ta帮助我</button>
+          </view>
+        </view>
+
+        <view class='cont'>
+          <view class='cont_title'>
+            {{content}}
+          </view>
+        </view>
+        <view class='border_bottom'></view>
+      </view>
+
+      
+    </view>
+    
+  </block>
+</view>

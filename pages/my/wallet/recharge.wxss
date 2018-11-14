@@ -1,0 +1,59 @@
+@import "/common/weui.wxss";
+
+Page {
+  /* background-color: #eff0f1; */
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+.over{
+  padding: 10px 15px;
+  background-color: #f6f7f8;
+  font-size: 24rpx;
+	color: #b7b7b7;
+}
+
+.type .weui-cell__hd{
+  margin-right: 10px;
+}
+
+.btn_class{
+  height: 100px;
+  background-color: #f6f7f8;
+  text-align: center;
+  padding-top: 30px;
+
+}
+
+.btn_class button{
+  margin: 0px 15px;
+}
+
+.weui-label{
+  font-size: 28rpx;
+	color: #333333;
+}
+
+.placer{
+  font-size: 28rpx;
+	color: #cccccc;
+}
+
+.type .weui-cell__bd{
+  font-size: 28rpx;
+	color: #333333;
+}
+
+.weui-input{
+  font-size: 28rpx;
+	color: #333333;
+}
+
+.weui-cell:after {
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.weui-cell:before {
+  border-top: 1rpx solid #f0f0f0;
+}

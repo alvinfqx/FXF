@@ -1,0 +1,84 @@
+<loading hidden="{{loading}}">正在加载</loading>
+<view class='page'>
+  <block wx:if="{{!hasData}}">
+    <view style='text-align:center;margin-top:40%;'>
+      无数据
+    </view>
+  </block>
+  <block wx:else>
+    <view class="section news_section">
+      <view class="weui-cells_after-title" style='background-color:#fff;'>
+        <view class="weui-cell">
+          <view class="weui-cell__hd heard_class">
+            <!--头像  -->
+            <image src="{{needDetail.UserPic}}" />
+          </view>
+          <view class="weui-cell__bd">
+            <view class='title_text'>
+                  {{needDetail.NickName}}
+              <text class='need_age'>♂︎{{needDetail.Age}}</text>
+            </view>
+            <view style="font-size: 12px;color: #b8b9ba;">{{needDetail.UserRemark}}</view>
+          </view>
+          <view class="weui-cell__ft">
+             <button class="weui-btn" bindtap='helpBtn'>帮助Ta</button> 
+          </view>
+        </view>
+
+        <view class='cont'>
+          <view class='cont_title'>
+             {{needDetail.Title?needDetail.Title:''}}
+          </view>
+          <view class='cont_detail'>
+            {{needDetail.Content?needDetail.Content:''}}
+          </view>
+        </view>
+
+        <view class="flex-row row_one" style="display: flex;">
+          <view class="flex-view-item row_item_one">
+            <image src="/image/time1@2x.png" style="margin-right: 5px;vertical-align: middle;width:15px; height: 15px;"></image>
+            <text>时间：</text>
+            <text>{{needDetail.BeginDate?needDetail.BeginDate:''}}</text>
+          </view>
+          <view class="flex-view-item row_item_two">
+            <!-- 查看图片描述 -->
+          </view>
+        </view>
+
+        <view class="flex-row row_two" style="display: flex;">
+          <view class="flex-view-item row_item_one">
+            <image src="/image/Positioning@2x.png" style="margin-right: 5px;vertical-align: middle;width:15px; height: 15px;"></image>
+            <text>地点：</text>
+            <text>{{needDetail.Position?needDetail.Position:''}}</text>
+          </view>
+        </view>
+
+        <view class="flex-row row_three" style="display: flex;">
+          <view class="flex-view-item row_item_one">
+            <image src="/image/purse@2x.png" style="margin-right: 5px;vertical-align: middle;width:15px; height: 15px;"></image>
+            <text>花费：</text>
+            <text>{{needDetail.Money?needDetail.Money:''}}元/人</text>
+          </view>
+          <view class="flex-view-item row_item_two">
+           {{needDetail.DiffTime?needDetail.DiffTime:'0'}}
+          </view>
+        </view>
+
+      </view>
+
+
+      <view class="flex-row" style="display: flex; margin-top:5px;margin-left:5px;">
+        <image src='{{baseUrl+item}}' wx:for-items="{{imageArr}}" wx:if="{{index < 3}}" wx:for-index="index" style='width:{{screenWidth}}rpx;height:{{screenHeight}}rpx;margin-right:5px;'></image>
+      </view>
+
+      <view class="flex-row" style="display: flex; margin-top:5px; margin-left:5px;">
+        <image src='{{baseUrl+item}}' wx:for-items="{{imageArr}}" wx:if="{{3 <= index && index < 6}}" wx:for-index="index" style='width:{{screenWidth}}rpx;height:{{screenHeight}}rpx;margin-right:5px;'></image>
+      </view>
+    </view>
+  </block>
+
+  <view class='input_class'>
+  <input class="input" bindinput='replayContent' placeholder-class="phcolor" placeholder="请描述可以帮助Ta的情况..." />
+  </view>
+
+</view>

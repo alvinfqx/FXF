@@ -1,0 +1,129 @@
+<!--pages/home/index.wxml-->
+<loading hidden="{{loading}}">正在加载</loading>
+<!--template模板页 调用 -->
+<import src="../common_page/home_sort.wxml" />
+
+<!--租金  -->
+<view class="mask" hidden="{{maskRentHidden}}" bindtap="mask1Cancel">
+  <template is="sort_list" data="{{rentSelected,roomTypeSelected,sortSelected,waySelected}}" />
+  <view class="overall-sort-list">
+    <block wx:for="{{rentList}}" wx:key="">
+      <view class="overall-sort" data-index="{{index}}" bindtap="rentSelected">{{item.name}}</view>
+    </block>
+  </view>
+</view>
+
+<!--户型  -->
+<view class="mask" hidden="{{maskRoomHidden}}" bindtap="mask1Cancel">
+  <template is="sort_list" data="{{rentSelected,roomTypeSelected,sortSelected,waySelected}}" />
+  <view class="overall-sort-list">
+    <block wx:for="{{roomList}}" wx:key="">
+      <view class="overall-sort" data-index="{{index}}" bindtap="roomTypeSelected">{{item.name}}</view>
+    </block>
+  </view>
+</view>
+
+<!--排序  -->
+<view class="mask" hidden="{{mask1Hidden}}" bindtap="mask1Cancel">
+  <template is="sort_list" data="{{rentSelected,roomTypeSelected,sortSelected,waySelected}}" />
+  <view class="overall-sort-list">
+    <block wx:for="{{sortList}}" wx:key="">
+      <view class="overall-sort" data-index="{{index}}" bindtap="sortSelected">{{item.name}}</view>
+    </block>
+  </view>
+</view>
+
+<!--方式  -->
+<view class="mask" hidden="{{maskWayHidden}}" bindtap="mask1Cancel">
+  <template is="sort_list" data="{{rentSelected,roomTypeSelected,sortSelected,waySelected}}" />
+  <view class="overall-sort-list">
+    <block wx:for="{{wayList}}" wx:key="">
+      <view class="overall-sort" data-index="{{index}}" bindtap="waySelected">{{item.name}}</view>
+    </block>
+  </view>
+</view>
+
+<!--主页  -->
+<scroll-view bindscrolltolower="ReachBottom" class="scroll-list" scroll-y="true" style="height:100%" bindscrolltoupper="PullDownRefresh">
+  <view class='body'>
+    <!--搜索栏  -->
+    <view class='search'>
+      <!--定位-->
+      <button wx:if="{{location==''}}" open-type="openSetting" bindopensetting='locationBtn' class="heard-location">
+        <image src="/image/location.png " class="heard-location-icon "></image>
+        <text class="heard-location-text ">{{location}}</text>
+      </button>
+      <view wx:else class="heard-location " bindtap='locationBtn'>
+        <image src="/image/location.png " class="heard-location-icon "></image>
+        <text class="heard-location-text ">{{location}}</text>
+      </view>
+
+      <!--查询bar -->
+      <view class='search_input'>
+        <view class="weui-search-bar__form ">
+          <view class="weui-search-bar__box ">
+            <icon class="weui-icon-search_in-box " type="search " size="14 "></icon>
+            <input type="text " class="weui-search-bar__input " placeholder-class='keyword_class' placeholder="请输入关键字搜索 " value="{{inputVal}}" focus="{{inputShowed}} " bindinput="inputSearch" />
+            <view class="weui-icon-clear " wx:if="{{inputVal.length> 0}}" bindtap="clearInput">
+              <icon type="clear" size="14"></icon>
+            </view>
+          </view>
+          <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">请输入关键字搜索</view>
+          </label>
+        </view>
+        <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput"></view>
+      </view>
+    </view>
+
+    <!--内容栏  -->
+    <view class='content'>
+      <template is="sort_list" data="{{rentSelected,roomTypeSelected,sortSelected,waySelected}}" />
+
+      <view class="section" wx:for-items="{{room_list}}">
+        <navigator url="/pages/home/home_detail/home_detail?id={{item.id}}" style='padding:15rpx 5%;'>
+          <view class='title_tip'>
+            {{item.content}}
+          </view>
+
+          <view class="flex-row" style="display: flex; margin-top:5px;">
+            <image src='{{item}}' wx:for-items="{{item.image}}" wx:if="{{index < 3}}" wx:for-index="index" style='width:230rpx;height:130rpx;margin-right:5px;'></image>
+          </view>
+
+          <view class="flex-row" style="display: flex; margin-top:5px;">
+            <image src='{{item}}' wx:for-items="{{item.image}}" wx:if="{{3 <= index && index < 6}}" wx:for-index="index" style='width:230rpx;height:130rpx;margin-right:5px;'></image>
+          </view>
+
+          <view class="flex-row" style="display: flex; margin-top:5px;">
+            <image src='{{item}}' wx:for-items="{{item.image}}" wx:if="{{6 <= index && index < 9}}" wx:for-index="index" style='width:230rpx;height:130rpx;margin-right:5px;'></image>
+          </view>
+
+          <view class="flex-row" style="display: flex;margin:20rpx 0px;">
+            <view class="flex-view-item" style='width:50%;'>
+              <image src="/image/position1@2x.png" style='width:24rpx;height:30rpx;'></image>
+              <text style='font-size:26rpx;color:#999;'> {{item.position}}</text>
+            </view>
+
+            <view class="flex-view-item" style='width:50%;text-align:right;'>
+              <image src="/image/time@2x.png" style='width:24rpx;height:24rpx;'></image>
+              <text style='font-size:26rpx;color:#999;'>  {{item.time}}</text>
+            </view>
+          </view>
+
+          <view class="flex-row" style="display: flex;margin-bottom:30rpx;">
+            <view class="flex-view-item" style='width:70%;'>
+              <text class='text_class' wx:for='{{item.type}}'> {{item}}</text>
+            </view>
+            <view class="flex-view-item" style='width:50%;text-align:right;'>
+              <text style='color: #f05857;font-size:36rpx;'>{{item.price}}</text>
+            </view>
+          </view>
+
+
+        </navigator>
+      </view>
+    </view>
+
+  </view>
+</scroll-view>

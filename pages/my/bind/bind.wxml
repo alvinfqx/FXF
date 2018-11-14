@@ -1,0 +1,25 @@
+<loading hidden="{{loading}}">正在加载</loading>
+<view class='page'>
+
+  <view class='content'>
+    <view class='hasbind' wx:if="{{hasBind == true}}">
+       <image src='/image/p@2x.png'></image>
+       <view class='bind_text'>已绑定手机号码</view>
+       <view class='mobile'>{{telephone}}</view>
+    </view>
+    <view class='nobind' wx:else>
+      <image src='/image/p@2x.png'></image>
+      <view class='nobind_text'>手机号码</view>
+      <input placeholder='请输入绑定手机号' placeholder-class='plhoder' bindinput='setTelephone' auto-focus value='{{telephone}}' />
+    </view>
+
+  </view>
+</view>
+
+<view class='btn_class'  wx:if="{{hasBind == true}}">
+  <button bindtap='btnChange' class="weui-btn comfire" type="warn">更改绑定</button>
+</view>
+
+<view class='btn_class' wx:else>
+  <button bindtap='btnComfire' class="weui-btn comfire" type="warn">确定绑定</button>
+</view>

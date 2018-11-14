@@ -1,0 +1,22 @@
+<!--template模板页 调用 -->
+<import src="../common_page/home_sort.wxml" />
+<view class='res'>
+  {{resJson}}
+</view>
+<view>
+  <button bindtap='GetNeighborListJson'>邻居圈动态</button>
+  <button bindtap='SaveNeighbor'>发布动态</button>
+  <button bindtap='GetNeighborEntityJson'>动态实体No1</button>
+  <button bindtap='SaveReplyNeighbor_0'>评论动态</button>
+  <button bindtap='GetNeighborAllJson'>动态详情No1</button>
+  <button bindtap='SaveReplyNeighbor_1'>回复评论</button>
+  <button bindtap='GetReplyNeighborListJson'>邻居圈评论列表</button>
+  <button bindtap='ZanOrCaiNeighbor'>赞-踩</button>
+  <button bindtap='GetIsYesNeighborListJson'>邻居圈点赞列表</button>
+</view>
+
+<view>
+    <!-- "pages/z-test/test", -->
+  <button bindtap='UserPay'>测试企业付款</button>
+</view>
+

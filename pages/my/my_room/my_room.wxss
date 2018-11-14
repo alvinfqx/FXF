@@ -1,0 +1,50 @@
+@import "/style/weui.wxss";
+Page{
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+}
+
+.first .weui-grids {
+ border-top:none;
+ border-left:none;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ margin-left: 2px;
+}
+
+.first .weui-grid {
+  background-color: #fff;
+  border-right:none;
+  border-bottom:none;
+  margin:2px;
+  width:32%;
+}
+
+
+.flex-fare{
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+
+.flex-fare .flex-view-item{
+  width: 50%;
+}
+
+.btn{
+  position: fixed;
+  bottom: 0px;
+  width: 100%; 
+}
+
+.btn button::after{
+   border: none;
+}
+.btn button{
+   border: none;
+   display: inline-block;
+   width: 50%;
+}

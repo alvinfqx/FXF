@@ -1,0 +1,264 @@
+
+@import "/common/weui.wxss";
+
+page {
+  background-color: #f6f7f8;
+  height: 100%;
+  width: 100%;
+}
+
+.search {
+  height: 100rpx;
+  background: linear-gradient(#e84947, #ee5857);
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+}
+
+.heard-location {
+  position: relative;
+  font-size: 25rpx;
+  padding: 5rpx 15rpx;
+  margin: 10rpx;
+  width: 160rpx;
+  height: 50rpx;
+  background: #bd2020;
+  color: white;
+  border-radius: 30rpx;
+}
+
+.heard-location-icon {
+  position: absolute;
+  top: 12rpx;
+  height: 25rpx;
+  width: 25rpx;
+}
+
+.heard-location-text {
+  position: absolute;
+  overflow: hidden;
+  left: 53rpx;
+  top: 9rpx;
+  height: 30rpx;
+  width: 100rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.heard-location:after {
+  content: '';
+  position: absolute;
+  top: 20rpx;
+  left: 130rpx;
+  width: 8rpx;
+  height: 8rpx;
+  border: 3rpx solid #fff;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.weui-search-bar__form {
+  margin-top: 5px;
+  border-radius: 29rpx;
+}
+
+.weui-search-bar__label {
+  border-radius: 20px;
+}
+
+.sort-list {
+  justify-content: space-around;
+  display: flex;
+  background: white;
+  width: 100%;
+  height: 80rpx;
+  font-size: 27rpx;
+  color: #6a6a6a;
+  align-content: center;
+  border: 1rpx solid #ececec;
+}
+
+.weui-search-bar__input{
+  color: #b9b9b9;
+  font-size: 26rpx;
+}
+
+.keyword_class{
+  color: #b9b9b9;
+  font-size: 26rpx;
+}
+
+.weui-search-bar__text{
+   color: #b9b9b9;
+   font-size: 26rpx;
+}
+
+.sort {
+  text-align: center;
+  margin: auto 0;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-right: 1rpx solid #ececec;
+  flex: 1;
+}
+
+.sort-active {
+  color: black;
+  font-weight: 800;
+}
+
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(15, 15, 26, 0.7);
+}
+
+/* pages/home/index.wxss */
+@import "/common/weui.wxss";
+
+page {
+  background-color: #f6f7f8;
+  height: 100%;
+  width: 100%;
+}
+
+.search {
+  height: 100rpx;
+  background: linear-gradient(#e84947, #ee5857);
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+}
+
+.heard-location {
+  position: relative;
+  font-size: 25rpx;
+  padding: 5rpx 15rpx;
+  margin: 10rpx;
+  width: 160rpx;
+  height: 50rpx;
+  background: #bd2020;
+  color: white;
+  border-radius: 30rpx;
+}
+
+.heard-location-icon {
+  position: absolute;
+  top: 12rpx;
+  height: 25rpx;
+  width: 25rpx;
+}
+
+.heard-location-text {
+  position: absolute;
+  overflow: hidden;
+  left: 53rpx;
+  top: 9rpx;
+  height: 30rpx;
+  width: 100rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.heard-location:after {
+  content: '';
+  position: absolute;
+  top: 20rpx;
+  left: 130rpx;
+  width: 8rpx;
+  height: 8rpx;
+  border: 3rpx solid #fff;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.weui-search-bar__form {
+  margin-top: 5px;
+  border-radius: 29rpx;
+}
+
+.weui-search-bar__label {
+  border-radius: 29rpx;
+  line-height: 56rpx;
+}
+
+.sort-list {
+  justify-content: space-around;
+  display: flex;
+  background: white;
+  width: 100%;
+  height: 80rpx;
+  font-size: 27rpx;
+  color: #6a6a6a;
+  align-content: center;
+  border: 1rpx solid #ececec;
+}
+
+.sort {
+  text-align: center;
+  margin: auto 0;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-right: 1rpx solid #ececec;
+  flex: 1;
+}
+
+.sort-active {
+  color: black;
+  font-weight: 800;
+}
+
+.overall-sort-list, .filterList, .filterList-footer {
+  background: white;
+}
+
+.overall-sort-list {
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0);
+  display: flex;
+}
+
+.overall-sort {
+  font-size: 25rpx;
+  height: 95rpx;
+  line-height: 50rpx; 
+  margin-left: 30rpx;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(15, 15, 26, 0.7);
+}
+
+.section {
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+
+.title_tip {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap; /*不显示的地方用省略号...代替*/
+  text-overflow: ellipsis; /* 支持 IE */
+  color:#000;
+  font-size:30rpx;
+}
+
+.text_class {
+  font-size: 22rpx;
+  background-color: #faf3f3;
+  padding: 8rpx;
+  margin-right: 10rpx;
+  border-radius: 5rpx;
+  line-height: 37rpx;
+  font-family: PingFang-SC-Medium;
+  color: #666467;
+}

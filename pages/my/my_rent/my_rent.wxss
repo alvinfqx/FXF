@@ -1,0 +1,103 @@
+@import "/style/weui.wxss";
+Page{
+  background-color: #eee;
+}
+
+.first .flex-row{
+  width: 100%;
+}
+
+.item-one{
+  width: 33%;
+  color: #fff;
+  position: relative;
+  height: 100px;
+}
+
+.item-one image{
+  width: 100%;
+ height: 100px;
+}
+
+.content_one{
+  position: absolute;
+  top: 25px;
+  left: 33%;
+}
+
+.item-two{
+  width: 33%;
+  color: #fff;
+  position: relative;
+   height: 100px;
+}
+.item-two image{
+  width: 100%;
+ height: 100px;
+}
+.content_two{
+  position: absolute;
+  top: 25px;
+  left: 33%;
+}
+
+.item-three{
+  position: relative;
+  width: 33%;
+  color: #fff;
+  height: 100px;
+}
+.item-three image{
+  width: 100%;
+  height: 100px;
+ 
+}
+.content_three{
+  position: absolute;
+  top: 25px;
+  left: 33%;
+
+}
+
+.flex-row-two .flex-view-item{
+   position: relative;
+   width: 33%;
+   color: #fff;
+}
+
+.flex-row-two .flex-view-item image{
+   width: 100%;
+   height: 100px;
+}
+.content{
+  position: absolute;
+  top: 25px;
+  left: 22%;
+}
+
+.flex-fare{
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+
+.flex-fare .flex-view-item{
+  width: 50%;
+}
+
+.btn{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.btn button::after{
+   border: none;
+}
+.btn button{
+   border: none;
+   display: inline-block;
+   width: 50%;
+}

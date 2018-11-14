@@ -1,0 +1,165 @@
+<view class="page">
+  <!--头部 star  -->
+  <view class='hearder'>
+    <view class='imgview'>
+      <image src='/image/bg6@2x.png'> </image>
+    </view>
+    <view class='heard_img_view'>
+      <image src='{{user.Avatar}}'></image>
+    </view>
+    <view class='name'>
+      <text class='name_text'>{{user.NickName}}</text>
+      <text class='name_age'>♂︎{{user.Age}}</text>
+      <view class='name_content'>{{user.Remark}}</view>
+    </view>
+
+  </view>
+
+  <!--头部 end  -->
+  <view class="page__bd">
+
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view>
+            <view class="map_container">
+              <map class="map" id="map" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" show-location></map>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class='active_content'>
+            <block wx:if="{{contentArr.length <= 0}}">
+              无动态数据
+            </block>
+            <block wx:else>
+
+              <view class='active_class' wx:for="{{contentArr}}" wx:for-index="index" wx:for-item="item">
+                <view class="flex-row" style="display: flex;">
+                  <view class="flex-view-item time">{{item.time}}</view>
+
+                  <view class="flex-view-item imgs">
+                    <!--图片大于一张  -->
+                    <view class="flex-row img_four" style="display: block;" wx:if="{{item.imgArr.length > 1}}">
+                      <view class="flex-view-item">
+                        <image wx:for="{{item.imgArr}}" wx:for-item="itemPic" wx:if="{{index < 2}}" wx:for-index="index" src='{{itemPic}}'></image>
+                      </view>
+                      <view class="flex-view-item">
+                        <image wx:for="{{item.imgArr}}" wx:for-item="itemPic" wx:if="{{index == 2 }}" wx:for-index="index" src='{{itemPic}}'></image>
+                        <image wx:for="{{item.imgArr}}" wx:for-item="itemPic" wx:if="{{index == 3 }}" wx:for-index="index" src='{{itemPic}}'></image>
+                      </view>
+                    </view>
+                    <!--图片等于一张或者无  -->
+                    <view class="flex-row img_one" style="display: block;" wx:if="{{item.imgArr.length == 1 || item.imgArr.length  == 0}}">
+                      <view class="flex-view-item">
+                        <image wx:for="{{item.imgArr}}" wx:for-item="itemPic" wx:for-index="index" src='{{itemPic}}'></image>
+                      </view>
+                    </view>
+
+                  </view>
+
+                  <view class="flex-view-item contents">
+                    <view class="flex-row" style="display: block;">
+                      <view class="flex-view-item contends_detail">{{item.content}}</view>
+                      <view class="flex-view-item contends_num">共 {{item.imgArr.length}} 张</view>
+                    </view>
+
+                  </view>
+                </view>
+                <view class='end_class'></view>
+              </view>
+
+            </block>
+          </view>
+
+
+
+        </view>
+
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <block wx:if="{{needArray.length <= 0}}">
+            <view style='text-align:center;margin-top:40%;'>
+              无数据
+            </view>
+          </block>
+          <block wx:else>
+            <view class="section news_section" wx:for="{{needArray}}">
+              <view class="weui-cells_after-title" style='background-color:#fff;'>
+                <view class="weui-cell">
+                  <view class="weui-cell__hd heard_class">
+                    <!--头像  -->
+                    <image src="{{user.Avatar}}" />
+                  </view>
+                  <view class="weui-cell__bd">
+                    <view class='title_text'>
+                      {{user.NickName}}
+                      <text class='need_age'> ♂︎{{user.Age}} </text>
+                    </view>
+                    <view style="font-size: 12px;color: #b8b9ba;">{{user.Remark}}</view>
+                  </view>
+                  <view class="weui-cell__ft">
+                    <button class="weui-btn">帮助Ta</button>
+                  </view>
+                </view>
+
+                <view class='cont'>
+                  <view class='cont_title'>
+                    {{item.Title}}
+                  </view>
+                  <view class='cont_detail'>
+                    {{item.Content}}
+                  </view>
+                </view>
+
+                <view class="flex-row row_one" style="display: flex;">
+                  <view class="flex-view-item row_item_one">
+                    <image src="/image/time1@2x.png" style="margin-right: 5px;vertical-align: middle;width:25rpx; height: 25rpx;"></image>
+                    <text>时间：</text>
+                    <text>{{item.CreateDate}}</text>
+                  </view>
+                  <view class="flex-view-item row_item_two">
+                    <navigator url="/pages/search/his_home/need_detail?did={{item.Id}}">
+                      查看图片描述
+                    </navigator>
+                  </view>
+                </view>
+
+                <view class="flex-row row_two" style="display: flex;">
+                  <view class="flex-view-item row_item_one">
+                    <image src="/image/Positioning@2x.png" style="margin-right: 5px;vertical-align: middle;width:19rpx; height: 25rpx;"></image>
+                    <text>地点：</text>
+                    <text>{{item.Position}}</text>
+                  </view>
+                </view>
+
+                <view class="flex-row row_three" style="display: flex;">
+                  <view class="flex-view-item row_item_one">
+                    <image src="/image/purse@2x.png" style="margin-right: 5px;vertical-align: middle;width:23rpx; height: 25rpx;"></image>
+                    <text>花费：</text>
+                    <text>{{item.Money}}/人</text>
+                  </view>
+                  <view class="flex-view-item row_item_two">
+                    {{item.DiffTime}}
+                  </view>
+                </view>
+
+
+              </view>
+            </view>
+          </block>
+
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

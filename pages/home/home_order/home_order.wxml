@@ -1,0 +1,99 @@
+<loading hidden="{{loading}}">正在加载</loading>
+<view class="page">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper_center' bindchange='onSlideChangeEnd'>
+        <block wx:for="{{imgArray}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item">
+              <image class="slide-image" mode='' src='{{item}}' style='width:100%;height:477rpx;'></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class='img_num'>{{imgIndex}} / {{imgArray.length}}</view>
+    </view>
+
+    <view class='title'>
+      <view class='title_tip'>
+        {{title}}
+      </view>
+      <view class="flex-row" style="display: flex;">
+        <view class="flex-view-item" style='width:100%;'>
+          <text class='money_class'> ¥{{houseRent}}元/月</text>
+          <text class='text_class'> {{depositMethod}}</text>
+          <text class='text_class'> {{houseType}}</text>
+          <text class='text_class'> {{houseRent}}m²</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells_after-title content_view">
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <view class="weui-label">
+            房屋地址
+          </view>
+        </view>
+        <view class="weui-cell__bd">
+          {{fullAddress}}
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <view class="weui-label">
+            入住时间
+          </view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{checkInData}}" bindchange="bindCheckChange">
+            <view class="weui-input"> {{checkInData}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <view class="weui-label">
+            入住期限
+          </view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder-class="phcolor" bindinput="limitBind" value='{{limitValue}}' type='number'/>
+        </view>
+        <view class="weui-cell__ft">
+          <view class="weui-label">
+            个月
+          </view>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <view class="weui-label">
+            预定价格
+          </view>
+        </view>
+        <view class="weui-cell__bd price_class">
+          ¥ {{setPrice}}
+        </view>
+      </view>
+    </view>
+
+    <view class='btn'>
+      <button class='new_btn_css' type='warn' bindtap='saveHouseOrder'>立即支付</button>
+    </view>
+
+  </view>
+</view>
+
+
+
+
+<!-- <view>户型 : {{houseType}}</view>
+<view>租金 : {{HouseRent}}</view>
+<view>押金方式 : {{depositMethod}}</view>
+<view>面积 : {{houseArea}}</view>
+<view>房屋地址 : {{fullAddress}}</view>
+<view>入住时间 : {{checkInData}}</view>
+<view>入住期限 : {{checkInLimit}}</view>
+<view>预定价格 : ${{setPrice}}</view>
+<button bindtap='saveHouseOrder'>立即支付</button> -->

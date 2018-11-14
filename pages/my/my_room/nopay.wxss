@@ -1,0 +1,42 @@
+@import "/style/weui.wxss";
+Page {
+  background-color: #eff0f1;
+  height: 100%;
+  width: 100%;
+}
+
+.title{
+  background-color: #fff;
+  color:#7e7f7f;
+  font-size: 15px;
+}
+
+.title .flex-row{
+  width: 100%;
+  text-align: left;
+}
+
+
+.title .flex-view-item{
+  width: 25%;
+  font-size: 24rpx;
+}
+
+
+
+.content{
+  margin-top: 5px;
+  background-color: #fff;
+  color:#7e7f7f;
+  height: 100%;
+  font-size: 15px;
+}
+
+.content .flex-row{
+  width: 100%;
+  text-align: left;
+}
+
+.content .flex-view-item{
+  width: 25%;
+}

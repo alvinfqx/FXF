@@ -1,0 +1,11 @@
+/* pages/z-test/test.wxss */
+
+button {
+  width: 10rem;
+  float: left;
+}
+
+.res {
+  height: 10rem;
+  overflow: hidden;
+}

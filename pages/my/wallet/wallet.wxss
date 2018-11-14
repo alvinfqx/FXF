@@ -1,0 +1,97 @@
+@import "/style/weui.wxss";
+
+Page {
+  background-color: #fff;
+}
+
+.header_now {
+  height: 150px;
+  width: 100%;
+  background-color: #e84947;
+  color: #fff;
+  text-align: center;
+  display: table;
+  position: relative;
+}
+
+.amount_view {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.amount {
+  font-size: 80rpx;
+	color: #ffffff;
+}
+
+.amount_text {
+  font-size: 28rpx;
+	color: #ffffff;
+}
+
+.sum {
+  background-color: #e75653;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.sum .flex-view-item {
+  width: 50%;
+}
+
+.sum_text {
+  font-size: 24rpx;
+	color: #ffffff;
+}
+
+.sum_value {
+  font-size: 36rpx;
+	color: #ffffff;
+}
+
+.detail {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.detail_btn::after {
+ border: none;
+}
+
+.detail button[type=default] {
+  color: #fff;
+  background-color: transparent;
+}
+
+.submit_class{
+  margin: 108rpx auto 37rpx;
+}
+
+.recharge{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px; 
+}
+
+.reflect{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px; 
+}
+
+.recharge[type=warn] {
+  color: #e75653;
+  background-color: transparent;
+}
+
+.recharge::after {
+  border:1px solid #e75653;
+}
+
+.tip{
+  text-align: center;
+  font-size: 28rpx;
+	color: #aaaaaa;
+}

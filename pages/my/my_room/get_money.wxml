@@ -1,0 +1,82 @@
+<loading hidden="{{loading}}">正在加载</loading>
+<view class='page'>
+  <view class='content' wx:for-items="{{list}}" >
+    <view class='roomNum'>金茂大厦1208</view>
+    <view class="weui-cells_after-title" style='background-color:#fff;'>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">租金</view>
+        </view>
+        <view class="weui-cell__bd"></view>
+        <view class="weui-cell__ft">        
+          <input class="weui-input" placeholder="请输入租金" />
+        </view>
+      </view>
+      
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">物业费</view>
+        </view>
+        <view class="weui-cell__bd"> </view>
+        <view class="weui-cell__ft">
+          <input class="weui-input" placeholder="请输入物业费用" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">水费</view>
+        </view>
+        <view class="weui-cell__bd"> </view>
+        <view class="weui-cell__ft">
+          <input class="weui-input" placeholder="请输入水费" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">电费</view>
+        </view>
+        <view class="weui-cell__bd"> </view>
+        <view class="weui-cell__ft">
+          <input class="weui-input" placeholder="请输入电费" />
+        </view>
+      </view>
+
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" style='text-align:center;'>
+        <view class="weui-cell__hd"></view>
+        <view class="weui-cell__bd">
+         <image src="/image/add@2x.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+         <text style='color:#999;'>添加自定义费用</text>
+        </view>
+        <view class="weui-cell__ft"></view>
+      </navigator>
+
+    </view>
+  </view>
+</view>
+
+
+
+  <view class='btn'>
+    <button type="warn" class='btn_css' bindtap='comfirmBtn' style='border-radius:0px;'>确定收租</button>
+  </view>
+
+  <!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">
+  <image src='/image/group4@2x.png' class='dialog_img'>
+  </image>
+  <text class='title_tip'> 收租成功！</text>
+  </view>
+  <view class="modal-content">
+    <view class="modal-input">
+     本月租金清单已成功发送给租户！
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>

@@ -1,0 +1,247 @@
+@import "/common/weui.wxss";
+
+Page {
+  background-color: #f6f7f8;
+  height: 100%;
+  width: 100%;
+  color: #666;
+  font-size: 30rpx;
+}
+
+page, .page, .page__bd {
+  height: 100%;
+}
+
+.page__bd {
+  padding-bottom: 0;
+}
+
+.weui-tab__content {
+  margin-top: 5px;
+}
+
+.weui-navbar {
+  background-color: #fff;
+}
+
+
+.weui-navbar__slider {
+  width: 50%;
+  background-color: #ef5352;
+}
+
+.weui-navbar__item {
+  padding: 25rpx 0rpx;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+  font-size: 30rpx;
+  color: #ef5352;
+}
+
+.weui-navbar {
+  border-bottom: none;
+}
+
+.img_one {
+  width: 43rpx;
+  height: 32rpx;
+}
+
+.img_two {
+  width: 24rpx;
+  height: 32rpx;
+}
+
+/*头像  */
+
+.heard_class image {
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  border-radius: 30px;
+}
+
+/*图片区域*/
+
+.img_class {
+  /* display: flex;  */
+  margin-top: 24rpx;
+}
+
+/* 内容的图片 */
+
+.img_class image {
+  width: 170rpx;
+  height: 170rpx;
+  margin-right: 11rpx;
+}
+
+/*名字  */
+
+.title {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap; /*不显示的地方用省略号...代替*/
+  text-overflow: ellipsis; /* 支持 IE */
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 37rpx;
+  letter-spacing: 0rpx;
+  color: #000;
+}
+
+/*标题  */
+
+.title_text {
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 37rpx;
+  letter-spacing: 0rpx;
+  color: #000;
+}
+
+.difftime {
+  font-size: 22rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 37rpx;
+  letter-spacing: 0rpx;
+  color: #afafaf;
+}
+
+/*底部样式  */
+
+.header_flex {
+  text-align: center;
+  height: 82rpx;
+  border-bottom: 1px solid #ecedee;
+  border-top: 1px solid #ecedee;
+  margin-top: 35rpx;
+  margin-bottom: 17rpx;
+}
+
+.header_item {
+  width: 33.3333%;
+  height: 30px;
+  margin-top: 4px;
+  border-right: 1px solid #ebebeb;
+}
+
+.weui-media-box__desc {
+  font-size: 30rpx;
+  padding-top: 5px;
+  position: relative;
+}
+
+/*底图图片  */
+
+.header_item image {
+  position: absolute;
+  top: 14rpx;
+  left: 25%;
+}
+
+.img_one {
+  width: 38rpx;
+  height: 25rpx;
+}
+
+.img_two {
+  width: 30rpx;
+  height: 26rpx;
+}
+
+.img_three {
+  width: 28rpx;
+  height: 26rpx;
+}
+
+/*发布按钮  */
+
+.realse {
+  position: absolute;
+  bottom: 56rpx;
+  right: 39rpx;
+  border-radius: 120rpx;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  /*垂直居中  父*/
+  display: table;
+  z-index: 999;
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #f16665;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+}
+
+.realse image {
+  width: 25rpx;
+  height: 35px;
+  position: absolute;
+  top: 28px;
+  left: 8px;
+}
+
+.realse_text {
+  /*垂直居中  子*/
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.news_section {
+  margin-bottom: 10px;
+}
+
+/*地图  */
+
+.map_container {
+  height: 100vh;
+  width: 100%;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.comment_class image {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 120rpx;
+}
+
+.comment_title {
+  color: #242425;
+  font-size: 15px;
+}
+
+.comment_foot {
+  margin-left: 18%;
+  color: #b1b2b3;
+  font-size: 12px;
+}
+
+.comment_foot image {
+  width: 10px;
+  height: 10px;
+}
+
+.comment_section {
+  margin-bottom: 5px;
+}
+
+.yes_class image {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 120rpx;
+}
+
+.yes_section {
+  margin-bottom: 3px;
+}

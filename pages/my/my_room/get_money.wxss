@@ -1,0 +1,106 @@
+@import "/style/weui.wxss";
+Page {
+  background-color: #eff0f1;
+  height: 100%;
+  width: 100%;
+}
+
+.content{
+  font-size: 15px;
+}
+
+.roomNum{
+  padding: 5px 15px 5px;
+  font-size: 14px;
+  color:#bebebe;
+
+}
+
+.btn{
+  position: fixed;
+  bottom: 0px;
+  width: 100%; 
+  z-index: 1
+}
+
+.btn button::after{
+   border: none;
+}
+.btn button{
+   border: none; 
+}
+
+/*开窗  */
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 0rpx;
+  padding-bottom: 10rpx;
+  font-size: 40rpx;
+  color: #fff;
+  text-align: center;
+  /* background-color:#ff3d49; */
+}
+
+.dialog_img{
+  width:100%;
+  height: 200rpx;
+}
+.title_tip{
+  display: inline-block;
+  position: absolute;
+  top: 40rpx;
+  left: 200rpx;
+  z-index: 99999;
+}
+
+.modal-content {
+  padding: 10rpx 32rpx 50rpx;
+  color:#ff6265;
+  font-size: 15px;
+  text-align: center;
+}
+
+
+.modal-footer {
+  height: 76rpx;
+  font-size: 34rpx;
+  margin: 10px auto 20px;
+  line-height: 66rpx;
+  text-align: center;
+}
+
+
+.btn-confirm {
+  width: 40%;
+  color:#ff6265;
+  text-align: center;
+  border-radius: 50px;
+  border: 1px solid #ff6265;
+  margin-left:30%;
+}
+/*开窗END  */

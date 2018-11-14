@@ -1,0 +1,61 @@
+@import "/style/weui.wxss";
+
+Page {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.top {
+  height: 300rpx;
+  text-align: center;
+  display: table;
+  width: 100%;
+}
+
+.top_content {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.tip {
+  font-size: 36rpx;
+	color: #333333;
+}
+
+.code {
+  font-size: 24rpx;
+	color: #999999;
+}
+
+.phcolor {
+  font-size: 28rpx;
+	color: #cccccc;
+}
+
+.code_btn {
+  font-size: 28rpx;
+	color: #407ff3;
+}
+
+.input_text{
+  font-size: 28rpx;
+}
+
+.btn_class button {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.btn_class {
+  margin-top: 30px;
+}
+
+
+.weui-cell:after {
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.weui-cell:before {
+  border-top: 1rpx solid #f0f0f0;
+}

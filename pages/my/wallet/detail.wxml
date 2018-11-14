@@ -1,0 +1,21 @@
+<loading hidden="{{loading}}">正在加载</loading>
+<view class='page'>
+  <view class='title'>
+    <view class="flex-row" style="display: flex;">
+      <view class="flex-view-item class_one">现有资金：{{SumPrice}}</view>
+      |
+      <view class="flex-view-item class_two">充值：{{IncomeNum}}次</view>
+      |
+      <view class="flex-view-item class_two">支出：{{ExpenditureNum}}次</view>
+    </view>
+  </view>
+
+  <view class='content'>
+    <view class="weui-cells_after-title">
+      <view class="weui-cell"  wx:for-items="{{list}}">
+        <view class="weui-cell__bd">{{item.CreateDate}}</view>
+        <view class="weui-cell__ft">{{item.Amount}}</view>
+      </view>
+    </view>
+  </view>
+</view>

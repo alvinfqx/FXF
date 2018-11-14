@@ -1,0 +1,32 @@
+@import "/style/weui.wxss";
+
+Page {
+  background-color: #fff;
+}
+
+.page {
+  color: #676869;
+}
+
+.weui-cell__hd {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.weui-cell:after {
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.weui-cell:before {
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.weui-cells::after {
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.phone_class {
+  color: #2480de;
+  margin-right: 10px;
+  font-size: 28rpx;
+}

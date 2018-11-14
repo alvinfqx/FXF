@@ -1,0 +1,28 @@
+<loading hidden="{{loading}}">正在加载</loading>
+<view class='page'>
+  <view class='title'>
+    <view class="weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="flex-row" style="display: flex;">
+          <view class="flex-view-item">姓名</view>
+          <view class="flex-view-item">欠租月份</view>
+          <view class="flex-view-item">欠租金额</view>
+          <view class="flex-view-item" style='text-align:center;'>电话</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='content'>
+    <view class="weui-cells_after-title">  
+       <navigator url="/pages/my/my_room/nopay_detail" wx:for-items="{{list}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="flex-row" style="display: flex;">
+          <view class="flex-view-item">张三</view>
+          <view class="flex-view-item">2月</view>
+          <view class="flex-view-item">1802元</view>
+          <view class="flex-view-item">15623309879</view>
+        </view>
+       </navigator>
+    </view>
+  </view>
+</view>

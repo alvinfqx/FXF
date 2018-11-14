@@ -1,0 +1,56 @@
+@import "/style/weui.wxss";
+Page {
+  background-color: #eff0f1;
+  height: 100%;
+  width: 100%;
+}
+.title{
+  background-color: #fff;
+  color:#7e7f7f;
+  font-size: 15px;
+}
+
+.title .flex-row{
+  width: 100%;
+}
+
+
+.title .flex-view-item{
+  width: 50%;
+}
+
+.detail_view{
+  padding-bottom: 20px;
+}
+
+.content{
+  margin-top: 5px;
+  background-color: #fff;
+  height: 100%;
+  font-size: 15px;
+}
+
+.detail_view image{
+  width: 120px;
+  height: 90px;
+}
+
+.detail_view .flex-row{
+  width: 100%;
+}
+
+.detail_view .flex-view-item{
+  width: 50%;
+  text-align: center;
+}
+
+
+
+
+.footer{
+  margin-top: 5px;
+  background-color: #fff;
+  height: 100%;
+  font-size: 15px;
+}
+

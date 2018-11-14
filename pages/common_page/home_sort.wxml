@@ -1,0 +1,21 @@
+<!--common_page/home_sort.wxml-->
+<template name="sort_list">
+  <view class="sort-list">
+    <view class="sort" bindtap="onRender">
+    {{rentSelected}}
+      <image src="/image/down.png" style="width:20rpx;height:20rpx;"></image>
+    </view>
+    <view class='sort' bindtap="onRoom">
+      {{roomTypeSelected}}
+      <image src="/image/down.png" style="width:20rpx;height:20rpx;"></image>
+    </view>
+    <view class='sort' bindtap="onOverallTag">
+      {{sortSelected}}
+      <image src="/image/down.png" style="width:20rpx;height:20rpx;"></image>
+    </view>
+    <view class="sort" bindtap="onWay">
+    {{waySelected}}
+     <image src="/image/down.png" style="width:20rpx;height:20rpx;"></image>
+    </view>
+  </view>
+</template>

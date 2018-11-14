@@ -1,0 +1,49 @@
+<view class="page">
+  <view class='top'>
+    <view class='top_content'>
+      <view class='tip'>
+        更换手机号需验证您的身份!
+      </view>
+      <view class='code'>
+        验证码将发送到新手机上,请注意查收
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-cells_after-title title_class input_text">
+    <view class="weui-cell "></view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">新号码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder-class="phcolor" placeholder="请输入新的手机号" bindinput='setTelephone' value='{{telephone}}' />
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">验证码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder-class="phcolor" placeholder="请输入短信验证码" bindinput='setCode' value='{{telCode}}' />
+      </view>
+      <view class="weui-cell__ft code_btn" bindtap='btnCode' 
+      wx:if="{{countDown <= 0}}">
+        获取短信验证码
+      </view>
+      <view class="weui-cell__ft code_btn" wx:else>
+        {{countDown}}S
+      </view>
+    </view>
+
+    <view class="weui-cell "></view>
+
+  </view>
+
+  <view class='btn_class'>
+    <button bindtap='btnSave' class="weui-btn comfire" type="warn">确定修改</button>
+  </view>
+
+</view>

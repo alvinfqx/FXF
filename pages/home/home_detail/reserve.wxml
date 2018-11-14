@@ -1,0 +1,43 @@
+<loading hidden="{{loading}}">正在加载</loading>
+<view class="page">
+  <view class="weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__hd">
+        <view class="weui-label">
+          看房日期
+        </view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="date" value="{{date}}"  bindchange="bindDateChange">
+          <view class="weui-input">{{date}}</view>
+        </picker>
+      </view>
+
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__hd">
+        <view class="weui-label">看房时间</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="time" value="{{time}}"  bindchange="bindTimeChange">
+          <view class="weui-input">{{time}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-cells_after-title content_view">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder-class="phcolor" placeholder="备注信息（选填）" bindinput='getContent' />
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class='btn'>
+    <button class='new_btn_css' type='warn' bindtap='reserveBtn'>提交预约</button>
+  </view>
+
+</view>

@@ -1,0 +1,117 @@
+<loading hidden="{{loading}}">正在加载</loading>
+<view class="page">
+  <view class="page-body">
+
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper_center' bindchange='onSlideChangeEnd'>
+        <block wx:for="{{imgArray}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item">
+              <image class="slide-image" mode='' src='{{item}}' style='width:100%;height:477rpx;'></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class='img_num'>{{imgIndex}} / {{imgArray.length}}</view>
+    </view>
+    <view class='title'>
+      <view class='title_tip'>
+        {{Title}}
+      </view>
+      <view class="flex-row" style="display: flex;">
+        <view class="flex-view-item" style='width:70%;'>
+          <text class='money_class'> ¥{{HouseRent}}元/月</text>
+          <text class='text_class'> {{DepositMethod}}</text>
+        </view>
+        <view class="flex-view-item" style='text-align:right;width:50%;margin-top:3px;'>
+          <text class='time_class'>更新时间: {{DayStr}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='room_information'>
+      <view class='tip_title'>
+        <image src='/image/home3@2x.png' style='width:29rpx;height:27rpx;'></image>
+        <text class='title_infor'>房屋信息</text>
+      </view>
+      <view class='infor_content'>
+        <view class="flex-row" style="display: block;">
+          <view class="flex-view-item">
+            <view class="flex-row" style="display: flex;">
+              <view class="flex-view-item">户型 :</view>
+              <view class="flex-view-item content_item_class">{{HouseType}}</view>
+              <view class="flex-view-item title_item_class">面积 :</view>
+              <view class="flex-view-item last_content">{{HouseArea}}</view>
+            </view>
+          </view>
+          <view class="flex-view-item">
+            <view class="flex-row" style="display: flex;">
+              <view class="flex-view-item">楼层 :</view>
+              <view class="flex-view-item content_item_class">{{FloorNum}}楼 / {{TotalFloors}}楼</view>
+              <view class="flex-view-item title_item_class">装修 :</view>
+              <view class="flex-view-item last_content">{{DecorationType}}</view>
+            </view>
+          </view>
+          <view class="flex-view-item">
+            <view class="flex-row" style="display: flex;">
+              <view class="flex-view-item">朝向 :</view>
+              <view class="flex-view-item content_item_class">{{Orientation}}</view>
+              <view class="flex-view-item title_item_class">类型 :</view>
+              <view class="flex-view-item last_content">{{UseType?UseType:''}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='room_attr'>
+      <view class='tip_title'>
+        <image src='/image/configuration@2x.png' style='width:29rpx;height:27rpx;'></image>
+        <text class='title_infor'>房屋配置</text>
+      </view>
+      <view class='attr_content'>
+        <view class="flex-row" style="display: block;" wx:for="{{attr_list}}">
+          <view class="flex-row" style="display: flex;">
+            <view class="flex-view-item attr_item" wx:for="{{attr_list[index]}}">
+              <image src='{{item.icon}}' style='width:27rpx;height:26rpx;'></image>
+              <text style='margin-left:16rpx;'>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='room_desc'>
+      <view class='tip_title'>
+        <image src='/image/edit@2x.png' style='width:29rpx;height:27rpx;'></image>
+        <text class='title_infor'>房屋描述</text>
+      </view>
+      <view class='desc_content'>
+        <view class="flex-row" style="display: flex;">
+          <view class="flex-view-item" style='margin-right:16rpx;'>小区 :</view>
+          <view class="flex-view-item">{{Community?Community:""}}</view>
+        </view>
+        <view class="flex-row" style="display: flex;">
+          <view class="flex-view-item" style='margin-right:16rpx;'>地址 :</view>
+          <view class="flex-view-item">{{FullAddress?FullAddress:""}}</view>
+        </view>
+      </view>
+      <view class='desc_detail'>
+        <text class="desc_text" decode="{{true}}">
+          &nbsp;&nbsp;&nbsp; {{Remark?Remark:''}}
+        </text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="flex-row btn" style="display: flex;">
+    <view class="flex-view-item btn_first_view">
+       <button type="default" class='left_btn' bindtap='reservationBtn' style='background-color:#fff;'>预约看房</button>
+    </view>
+    <view class="flex-view-item btn_second_view">
+      <button type="warn" class='right_obtn' style='border-radius:0px;'  bindtap='bookBtn' >立即订房</button>
+    </view>
+  </view>
+
+</view>

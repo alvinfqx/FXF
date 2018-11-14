@@ -1,0 +1,125 @@
+@import "/common/weui.wxss";
+
+Page {
+  background-color: #f6f7f8;
+  height: 100%;
+  width: 100%;
+}
+
+.title{
+  background-color: #fff;
+  padding:40rpx;
+  margin-bottom: 10rpx;
+  font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 0rpx;
+	letter-spacing: 0rpx;
+	color: #666666;
+}
+
+/*需求 star  */
+
+.news_section {
+  margin-bottom: 30rpx;
+}
+
+.news_section button {
+  font-size: 26rpx;
+	color: #f16665;
+  background-color: transparent;
+	border-radius: 6rpx;
+	border: solid 2rpx #f16665;
+}
+
+.cont_title {
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #000000;
+}
+
+.cont {
+  padding: 0px 5px 5px 20px;
+}
+
+.cont_detail {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap; /*不显示的地方用省略号...代替*/
+  text-overflow: ellipsis; /* 支持 IE */
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #999999;
+}
+
+.row_one {
+  font-size: 30rpx;
+  padding: 5px 10px 10px 27rpx;
+}
+
+.row_one .row_item_two {
+  width: 30%;
+  text-align: right;
+  font-size: 28rpx;
+	color: #0099ff;
+}
+
+.row_one .row_item_one {
+  width: 70%;
+  font-size: 28rpx;
+	color: #333333;
+}
+
+.row_two {
+  padding: 5px 10px 10px 29rpx;
+  font-size: 28rpx;
+	color: #333333;
+}
+
+.row_three {
+  font-size: 30rpx;
+  padding: 5px 10px 15rpx 27rpx;
+}
+
+.row_three .row_item_two {
+  width: 30%;
+  text-align: right;
+  font-size: 28rpx;
+	color: #999999;
+}
+
+.row_three .row_item_one {
+  width: 70%;
+  font-size: 28rpx;
+	color: #333333;
+}
+
+.weui-cell:after {
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.weui-cell:before {
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.tip{
+  color: #fff;
+  font-size: 16rpx;
+  padding: 2px 15rpx;
+  background-color: #f05856;
+	border-radius: 9rpx;
+}
+
+.peoplenum{
+  font-size: 26rpx;
+	color: #666666;
+}
+
+.peo{
+  margin-right: 8px;
+}
+
+
+/*需求 end  */

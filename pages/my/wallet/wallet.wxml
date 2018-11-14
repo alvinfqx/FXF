@@ -1,0 +1,45 @@
+<loading hidden="{{loading}}">正在加载</loading>
+<view class='header_now'>
+  <view class='amount_view'>
+    <view class='amount'>{{nowAmount}} </view>
+    <view class='amount_text'> 现有资产(￥)</view>
+  </view>
+</view>
+
+<view class='sum'>
+  <view class="flex-row" style="display: flex;">
+    <view class="flex-view-item">
+      <view class='sum_text'>累计收入</view>
+      <view class='sum_value'>￥{{sumIncome}} </view>
+    </view>
+    ⎥
+    <view class="flex-view-item">
+      <view class='sum_text'>累计支出</view>
+      <view class='sum_value'>￥{{sumExpenditure}} </view>
+    </view>
+  </view>
+</view>
+
+<view class='detail' wx:if='{{haslogin_}}'>
+  <navigator url='/pages/my/wallet/detail'>
+    <button class="weui-btn mini-btn detail_btn" type="default" size="mini">账单明细 </button>
+  </navigator>
+</view>
+
+
+
+<!-- <view>
+  输入金额 :
+  <input placeholder="输入金额" auto-focus bindinput="setMoney" value='{{money}}' />
+</view> -->
+
+
+
+<view class='submit_class'>
+  <button bindtap='btnPay' class="weui-btn recharge" type="warn">充值</button>
+  <button bindtap='btnMinus' class="weui-btn reflect" type="warn">提现</button>
+</view>
+
+<view class='tip'>
+  <view>充值后租住期间，每月租金将自动扣除。</view>
+</view>

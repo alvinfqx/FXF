@@ -1,0 +1,41 @@
+@import "/style/weui.wxss";
+Page{
+  background-color: #eee;
+}
+
+.first{
+  font-size: 14px;
+}
+
+.text {
+  color: #0097ff;
+  font-weight: none;
+}
+
+.phcolor {
+  color: #cbcccd;
+}
+
+.textarea_class {
+  height: 6em;
+}
+
+.detail_view{
+  padding-bottom: 20px;
+}
+
+.btn{
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   }
+.btn_css{
+   background:-webkit-gradient(linear, 0% 0%, 100% 0%,from(rgba(249, 101, 90, 1)), to(rgba(237,63,49,1))) !important;
+}
+
+.btn button::after{
+   border: none;
+}
+.btn button{
+   border: none;
+}

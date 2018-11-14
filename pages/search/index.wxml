@@ -1,0 +1,58 @@
+<!--pages/search/index.wxml-->
+<view class='list'>
+  <view class="weui-cells_after-title" >
+
+    <view wx:for="{{menuList}}" bindtap='{{item.Bindtap}}' class="weui-cell weui-cell_access navigator_class" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="{{item.PicUrl}}" class='img_one'></image>
+      </view>
+      <view class="weui-cell__bd class_text text_one">{{item.MenuName}}</view>
+      <view class="weui-cell__ft">
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+<!-- 
+    <view bindtap='btnUrl_1' class="weui-cell weui-cell_access navigator_class" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/image/zbljq@2x.png" class='img_one'></image>
+      </view>
+      <view class="weui-cell__bd class_text text_one">周边邻居圈</view>
+      <view class="weui-cell__ft">
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+
+    <view bindtap='btnUrl_2' class="weui-cell weui-cell_access navigator_class" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/image/zbxq@2x.png" class='img_two'></image>
+      </view>
+      <view class="weui-cell__bd class_text text_two">周边需求</view>
+      <view class="weui-cell__ft">
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+
+
+    <view bindtap='btnUrl_3' class="weui-cell weui-cell_access navigator_class" hover-class="weui-cell_active">
+      <view class="weui-cell__hd image_class">
+        <image src="/image/bwzf1@2x.png" class='img_three'></image>
+      </view>
+      <view class="weui-cell__bd class_text text_three">帮我找房</view>
+      <view class="weui-cell__ft">
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+
+
+    <view bindtap='btnUrl_4' class="weui-cell weui-cell_access navigator_class" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/image/wycz@2x.png" class='img_four'></image>
+      </view>
+      <view class="weui-cell__bd class_text text_four">我要出租</view>
+      <view class="weui-cell__ft">
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view> -->
+
+  </view>
+</view>

@@ -1,0 +1,63 @@
+@import "/style/weui.wxss";
+Page {
+  background-color: #eff0f1;
+  height: 100%;
+  width: 100%;
+}
+
+
+.flex-row-two .flex-view-item{
+   position: relative;
+   width: 33%;
+   color: #fff;
+}
+
+.flex-row-two .flex-view-item image{
+   width: 100%;
+   height: 100px;
+}
+.content{
+  position: absolute;
+  top: 25px;
+  left: 22%;
+}
+.first{
+  font-size: 14px;
+}
+
+.text {
+  color: #0097ff;
+  font-weight: none;
+}
+
+.phcolor {
+  color: #cbcccd;
+}
+
+.textarea_class {
+  height: 6em;
+}
+
+.detail_view{
+  padding-bottom: 10px;
+}
+
+.third{
+  padding: 15px;
+  font-size: 28rpx;
+  color:#a3a3a3;
+}
+
+
+.btn{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.btn button::after{
+   border: none;
+}
+.btn button{
+   border: none;
+}

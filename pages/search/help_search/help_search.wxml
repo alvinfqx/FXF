@@ -1,0 +1,73 @@
+<form bindsubmit="formSubmit">
+  <view class="weui-cells_after-title view_class">
+    <view bindtap="chooseLocation" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd position_class">
+        <image src="/image/new_position.png"></image>
+      </view>
+      <view class="weui-cell__bd text" wx:if="{{hasLocation === false}}" style=''>
+        选择您的意向房源位置
+      </view>
+      <view class="weui-cell__bd text" wx:if="{{hasLocation === true}}" style=''>
+        {{locationAddress}}
+      </view>
+    </view>
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder-class="phcolor" placeholder="请输入大概街道或地铁站公交站" />
+      </view>
+    </view>
+
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd lable_name" style='margin-right:-8rem;'>户型</view>
+      <view class="weui-cell__bd">
+        <picker bindchange="roomChange" range="{{room_list}}" value="{{room_id}}">
+          <view class='select_class'>
+            {{room_name}}
+          </view>
+        </picker>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd lable_name" style='margin-right:-8rem;'>租金</view>
+      <view class="weui-cell__bd">
+        <picker bindchange="moneyChange" range="{{money_list}}" value="{{money_id}}">
+          <view class='select_class'>
+            {{money_name}}
+          </view>
+        </picker>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd lable_name" style='margin-right:-8rem;'>详细描述</view>
+      </view>
+    </view>
+    <view class="detail_view">
+      <view class="weui-cell__bd" style='margin-left:30rpx;'>
+        <textarea class="textarea_class" placeholder="请输入的详细租房要求" placeholder-class="phcolor" maxlength='300' />
+      </view>
+    </view>
+
+  </view>
+</form>
+
+<view class='tip_class'>
+
+  <text>* 需先支付500元作为业务员佣金，详情请阅读:</text>
+  <navigator class='text_content' url=''>
+    <text>《房信房雇佣协议》</text>
+  </navigator>
+  <text>点击提交即表示您同意房信房雇佣协议中的内容。</text>
+
+</view>
+
+
+<view class='btn'>
+  <button class='new_btn_css' type='warn' formType="submit">发布</button>
+</view>

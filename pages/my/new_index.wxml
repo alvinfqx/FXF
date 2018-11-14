@@ -1,0 +1,82 @@
+<loading hidden="{{loading}}"> 正在加载</loading>
+<view class='page'>
+  <view class='header'>
+    <view class='red_class'>
+    </view>
+    <view class='header_content'>
+      <image  src='/image/bj@2x.png' class='heard_img'></image>
+      <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class="weui-btn heard_btn" type="default" hidden='{{isUserAut}}'></button>
+      <view class='triangle-topleft'>
+        <image src='/image/22@2x.png' wx:if="{{hasUserInfo === true}}"></image>
+        <image src='/image/33@2x.png' wx:else></image>
+      </view>
+
+      <view class='isLogin' wx:if="{{hasUserInfo === false}}">
+        <view class='avatar btn_login'>
+          <image src="/image/11@2x.png"></image>
+        </view>
+        <view class='head_name'>
+          {{nickName}}
+          <text class='head_age'>♂︎ 0</text>
+        </view>
+        <view class='heard_msg'>请点击获取授权</view>
+      </view>
+      <view class='isLogin' wx:if="{{hasUserInfo === true}}">
+       <view class='avatar'> 
+          <image src="{{photo}}" bindtap='editPersonal' class='hasImage'>           
+          </image>
+          <view class='head_name'>
+            {{nickName}}
+            <text class='head_age'>♂︎ {{age}}</text>
+          </view>
+          <view class='heard_msg'>
+            {{remark}}
+          </view>
+        </view>
+
+      </view>
+
+      <view class='header_back'>
+        <image src='/image/111@2x.png'></image>
+      </view>
+
+      <view class="flex-row header_flex" style="display: flex;">
+        <view class="flex-view-item header_item">
+          <navigator url='/pages/my/search_record/record'>
+            <view class="weui-media-box__title header_titile">{{recordNum}}</view>
+            <view class="weui-media-box__desc header_text">找房记录</view>
+          </navigator>
+        </view>
+        <text class='text'>|</text>
+        <view class="flex-view-item header_item">
+          <view bindtap='btnDongTai'>
+            <view class="weui-media-box__title header_titile">{{neighborNum}}</view>
+            <view class="weui-media-box__desc header_text">我的动态</view>
+          </view>
+        </view>
+
+        <text class='text'>|</text>
+        <view class="flex-view-item header_item">
+          <navigator url='/pages/my/myneed/myneed'>
+            <view class="weui-media-box__title header_titile">{{demanNum}}</view>
+            <view class="weui-media-box__desc header_text">我的需求</view>
+          </navigator>
+        </view>
+      </view>
+
+
+
+
+    </view>
+  </view>
+
+  <view class="weui-grids">
+    <block wx:for="{{grids}}" wx:key="*this">
+      <navigator url="{{item.url}}" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="{{item.image}}" style='width:{{item.width}};height:{{item.height?item.height:""}};' />
+        <view class="weui-grid__label grid_name">{{item.label}}</view>
+      </navigator>
+    </block>
+  </view>
+
+</view>
