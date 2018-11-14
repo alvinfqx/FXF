@@ -1,0 +1,37 @@
+@import "/style/weui.wxss";
+Page{
+  background-color: #eee;
+}
+
+.title{
+  background-color: #fff;
+  color: #666;
+  font-size: 28rpx;
+  padding:20rpx 28rpx;
+  
+}
+
+.section{
+  background-color: #fff;
+  margin-top:10rpx;
+}
+
+.title_tip{
+  overflow:hidden;
+  width: 100%;
+  white-space:nowrap;/*不显示的地方用省略号...代替*/
+  text-overflow:ellipsis;/* 支持 IE */
+  color:#000;
+  font-size:30rpx;
+
+}
+.text_class {
+  font-size: 22rpx;
+  background-color: #faf3f3;
+  padding: 8rpx;
+  margin-right: 10rpx;
+  border-radius: 5rpx;
+  line-height: 37rpx;
+  font-family: PingFang-SC-Medium;
+  color: #666467;
+}

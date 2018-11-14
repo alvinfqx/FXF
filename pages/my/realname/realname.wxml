@@ -1,0 +1,54 @@
+<loading hidden="{{loading}}">正在加载</loading>
+
+<view class='page'>
+  <view class='text'>
+    <view class="weui-cells_after-title title_class">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">真实姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder-class="phcolor" placeholder='请输入真实姓名' bindinput='setUserName' auto-focus value='{{username}}' />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">身份证号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder-class="phcolor" placeholder='请输入身份证号' bindinput='setCardID' auto-focus value='{{cardid}}' />
+        </view>
+
+      </view>
+      <view class="weui-cell weui-cell_input"></view>
+    </view>
+  </view>
+
+  <view class='idcard'>
+    <view class='in_idcard'>
+      <view class='in_idcard_img'>
+        <!-- <image style='width:50px;height:50px;' src='{{frontCard}}' bindtap='z_btnPhoto'></image> -->
+        <image  src='{{frontCard}}' bindtap='z_btnPhoto'></image>
+      </view>
+      <view class='id_text'>点击上传身份证正面</view>
+    </view>
+
+    <view class='be_idcard'>
+      <view class='be_idcard_img'>
+        <!-- <image style='width:50px;height:50px;' src='{{behindCard}}' bindtap='f_btnPhoto'></image> -->
+        <image  src='{{behindCard}}' bindtap='f_btnPhoto'></image>
+      </view>
+      <view class='id_text'>点击上传身份证反面</view>
+    </view>
+  </view>
+
+  <view class='status' wx:if='{{status > -1}}'>
+    <label>审核状态 : {{remark}}</label>
+  </view>
+  <view class='btn_class' wx:if='{{status == -1 || status == 2}}'>
+     <button bindtap='btnSave' class="weui-btn btn_save" type="warn">提交审核</button>
+  </view>
+ 
+  
+</view>
